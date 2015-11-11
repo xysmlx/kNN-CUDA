@@ -19,6 +19,7 @@
 #include <fstream>
 using namespace std;
 typedef long long ll;
+const double INF = 1e30;
 typedef pair<int, double> prid;
 
 class KNN
@@ -47,11 +48,13 @@ public:
 public:
 	void init(int _k, int _row, int _col, string path); // init
 	void input(); // Input data
-	void ZScore(); // Z-Score
+	void ZScoreNorm(); // Z-Score Norm
+	void MaxMinNorm(); // Max min Norm
 	double dis(const Node &A, const Node &B); // Calculate distance between A and B
 	void CalDis();
 	string MaxFreqLabel(); // Calculate freq label
 	void knn(); // Run knn
+	void debug(); // For debug
 
 public:
 	ifstream fin;
@@ -73,6 +76,9 @@ void KNN::init(int _k, int _row, int _col, string path)
 	therK = _k;
 	row = _row;
 	col = _col;
+	filepath = path;
+
+	cout << therK << " " << row << " " << col << endl;
 }
 
 void KNN::input()
@@ -85,11 +91,13 @@ void KNN::input()
 		fin >> dataSet[i].label;
 	}
 	fin.close();
+	// debug();
 
-	ZScore();
+	MaxMinNorm();
+	// ZScoreNorm();
 }
 
-void KNN::ZScore()
+void KNN::ZScoreNorm()
 {
 	for (int j = 0; j < col; j++)
 	{
@@ -106,6 +114,24 @@ void KNN::ZScore()
 
 		for (int i = 0; i < row; i++)
 			dataSet[i].data[j] = (dataSet[i].data[j] - avg) / sig;
+	}
+}
+
+void KNN::MaxMinNorm()
+{
+	for (int j = 0; j < col; j++)
+	{
+		double maxx = max(dataSet[0].data[j], dataSet[1].data[j]);
+		double minx = min(dataSet[0].data[j], dataSet[1].data[j]);
+		for (int i = 0; i < row; i++)
+		{
+			//if (dataSet[i].data[j] > maxx) maxx = dataSet[i].data[j];
+			//else if (dataSet[i].data[j] < minx) minx = dataSet[i].data[j];
+			maxx = max(maxx, dataSet[i].data[j]);
+			minx = min(minx, dataSet[i].data[j]);
+		}
+		for (int i = 0; i < row; i++)
+			dataSet[i].data[j] = (double)(dataSet[i].data[j] - minx) / (double)(maxx - minx);
 	}
 }
 
@@ -155,21 +181,32 @@ void KNN::knn()
 	for (int i = 0; i < testNum; i++)
 	{
 		dataTest = dataSet[i];
-		string label = MaxFreqLabel();
-		if (label == dataTest.label)
+		if (MaxFreqLabel() == dataTest.label)
 			cnt++;
 	}
 
-	cout << cnt << " " << testNum << endl;
+	//cout << cnt << " " << testNum << endl;
 
 	cout << "Accuracy Rate: " << (double)cnt / (double)testNum << endl;
+}
+
+void KNN::debug()
+{
+	ofstream fout;
+	fout.open("debug.txt");
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+			fout << dataSet[i].data[j] << "\t";
+		fout << dataSet[i].label << endl;
+	}
 }
 
 KNN knn;
 
 void init()
 {
-	knn.init(7, 45223, 8, "allTypeC.txt");
+	knn.init(7, 3000, 8, "allTypeC.txt");
 }
 void input()
 {
