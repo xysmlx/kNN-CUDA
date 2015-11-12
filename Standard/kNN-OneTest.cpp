@@ -28,7 +28,7 @@ public:
 	static const int maxCol = 10;
 	static const int maxRow = 46010;
 
-	static const int testNum = 300; // Data number for test
+	static const int testNum = 4000; // Data number for test
 
 public:
 	struct Node
@@ -177,17 +177,32 @@ void KNN::knn()
 {
 	cout << "Test data num: " << testNum << endl;
 
-	int cnt = 0;
+	int cntTP = 0, cntFP = 0, cntTN = 0, cntFN = 0;
 	for (int i = 0; i < testNum; i++)
 	{
 		dataTest = dataSet[i];
-		if (MaxFreqLabel() == dataTest.label)
-			cnt++;
+		string tmp = MaxFreqLabel();
+		if (tmp == dataTest.label)
+		{
+			if (dataTest.label == "1") cntTP++;
+			else cntTN++;
+		}
+		if (tmp != dataTest.label)
+		{
+			if (dataTest.label == "1") cntFP++;
+			else cntFN++;
+		}
 	}
 
 	//cout << cnt << " " << testNum << endl;
 
-	cout << "Accuracy Rate: " << (double)cnt / (double)testNum << endl;
+	double Prec = (double)cntTP / (double)(cntTP + cntFP);
+	double Accu = (double)(cntTP + cntTN) / (double)(testNum);
+	double Recall = (double)cntTP / (double)(cntTP + cntFN);
+	double S = (double)cntTN / (double)(cntTN + cntFP);
+	double F = 2 * Recall * Accu / (Recall + Accu);
+
+	cout << Prec << " " << Accu << " " << Recall << " " << S << " " << F << endl;
 }
 
 void KNN::debug()
@@ -206,7 +221,7 @@ KNN knn;
 
 void init()
 {
-	knn.init(7, 3000, 8, "allTypeC.txt");
+	knn.init(7, 45222, 8, "allTypeC.txt");
 }
 void input()
 {

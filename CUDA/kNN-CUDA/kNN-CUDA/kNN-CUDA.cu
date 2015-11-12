@@ -28,7 +28,7 @@ public:
 	static const int maxCol = 10;
 	static const int maxRow = 46010;
 
-	static const int testNum = 300; // Data number for test
+	static const int testNum = 4000; // Data number for test
 
 public:
 	struct Node
@@ -56,6 +56,8 @@ public:
 	void knn(); // Run knn
 
 	void CUDAInit(); // Init CUDA
+	//static __global__ void DisKernel(double *traindata, double *testdata, double *dis, int pitch, int N, int D);
+
 
 	void debug(); // For debug
 
@@ -79,6 +81,9 @@ public:
 	double *GTrainData;
 	size_t pitch_d;
 	size_t pitch_h;
+	double *GTestData;
+	double *GDis;
+	double *distance;
 };
 
 void KNN::init(int _k, int _row, int _col, string path)
@@ -173,16 +178,7 @@ void KNN::CalDis()
 {
 	vec.clear();
 
-	double *GTestData;
-	double *GDis;
-	double *distance;
-
-	distance = new double[trainRow];
-
-	cudaMalloc(&GTestData, col * sizeof(double));
-	cudaMalloc(&GDis, trainRow * sizeof(double));
-
-	cudaMemset(GTestData, 0, col * sizeof(double));
+	//cudaMemset(GTestData, 0, col * sizeof(double));
 	cudaMemset(GDis, 0, trainRow * sizeof(double));
 
 	cudaMemcpy(GTestData, dataTest.data, col * sizeof(double), cudaMemcpyHostToDevice);
@@ -221,6 +217,7 @@ string KNN::MaxFreqLabel()
 
 void KNN::knn()
 {
+	CUDAInit();
 	cout << "Test data num: " << testNum << endl;
 
 	int cnt = 0;
@@ -250,6 +247,11 @@ void KNN::CUDAInit()
 	cudaMallocPitch(&GTrainData, &pitch_d, col * sizeof(double), trainRow);
 	cudaMemset(GTrainData, 0, trainRow * col * sizeof(double));
 	cudaMemcpy2D(GTrainData, pitch_d, trainmtx, pitch_h, col * sizeof(double), trainRow, cudaMemcpyHostToDevice);
+
+	distance = new double[trainRow];
+
+	cudaMalloc(&GTestData, col * sizeof(double));
+	cudaMalloc(&GDis, trainRow * sizeof(double));
 }
 
 void KNN::debug()
@@ -268,7 +270,7 @@ KNN knn;
 
 void init()
 {
-	knn.init(7, 3000, 8, "allTypeC.txt");
+	knn.init(7, 45222, 8, "allTypeC.txt");
 }
 void input()
 {

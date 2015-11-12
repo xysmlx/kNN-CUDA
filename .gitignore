@@ -1,2 +1,3 @@
 test/
 CUDA/kNN-CUDA/kNN-CUDA/Debug/
+CUDA/kNN-CUDA/kNN-CUDA/Release/
