@@ -1,0 +1,437 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm]{geometry}
+\usepackage{ctex}
+\usepackage[colorlinks,bookmarksnumbered=true,bookmarksopen=true,CJKbookmarks=true,linkcolor=red,anchorcolor=black,citecolor=black]{hyperref}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{ccmap}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbding}
+\usepackage{url}
+\usepackage{movie15}
+\usepackage{booktabs,longtable}
+\usepackage{mdwlist}
+\usepackage{subfigure}
+\usepackage{pifont}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage[labelsep=space]{caption}
+\usepackage{multirow,paralist}
+\usepackage[title,titletoc]{appendix}
+\usepackage[svgnames,x11names]{xcolor}
+\usepackage[titles,subfigure]{tocloft}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{1pt}  %页眉线宽，设为0可以去页眉线
+\lhead{\small{机器学习作业一}}
+\chead{}
+\rhead{\small{马凌霄(1501111302)，李奕(1501214394)}}
+\lfoot{}
+\cfoot{}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+  \def\CU@definezihao#1#2#3{
+  \def#1{\fontsize{#2}{#3}\selectfont}}
+
+\CU@definezihao{\zihaochu}{42}{50}
+\CU@definezihao{\zihaoxiaochu}{36}{44}
+\CU@definezihao{\zihaoyi}{28}{34}
+\CU@definezihao{\zihaoer}{22}{26}
+\CU@definezihao{\zihaoxiaoer}{18}{22}
+\CU@definezihao{\zihaosan}{15.7}{19}
+\CU@definezihao{\zihaosi}{14}{17}
+\CU@definezihao{\zihaoxiaosi}{12}{14}
+\CU@definezihao{\zihaowu}{10.5}{12}
+\CU@definezihao{\zihaoxiaowu}{9}{11}
+\CU@definezihao{\zihaoliu}{7.875}{9}
+\CU@definezihao{\zihaoqi}{5.25}{6}
+
+\titleformat{\section}{\zihaosi\bfseries}{$\S\;$\thesection}{1em}{}
+\titleformat{\subsection}{\zihaoxiaosi\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\zihaoxiaosi\bfseries}{\thesubsubsection}{1em}{}
+
+\usepackage{tabularx}
+\newcommand{\PreserveBackslash}[1]{\let \temp =\\#1 \let \\ = \temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{算法}
+
+\theoremstyle{definition}
+\newtheorem{defn}{定义}
+\SetKwProg{Fn}{Function}{:}{end}
+
+\usepackage{xcolor}
+
+%\renewcommand{\figurename}{\zihaowu{Figure}}
+
+\makeatletter
+  \newcommand\figcaption{\def\@captype{figure}\caption}
+  \newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
+
+\usepackage{listings}
+\lstset{tabsize=4, %
+  frame=single, %把代码用带有阴影的框圈起来
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+  %commentstyle=\color{red!50!green!50!blue!50},% 浅灰色的注释
+  rulesepcolor=\color{red!20!green!20!blue!20},% 代码块边框为淡青色
+  %keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体
+  showstringspaces=false,% 不显示代码字符串中间的空格标记
+  stringstyle=\ttfamily, % 代码字符串的特殊格式
+  keepspaces=true, %
+  breakindent=22pt, %
+  numbers=left,%左侧显示行号
+  stepnumber=1,%
+  numberstyle=\footnotesize, %行号字体用小号
+  basicstyle=\footnotesize, %
+  showspaces=false, %
+  flexiblecolumns=true, %
+  breaklines=true, % 对过长的代码自动换行
+  breakautoindent=true,%
+  breakindent=4em, %
+  escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*},
+  aboveskip=1em, %代码块边框
+  %% added by http://bbs.ctex.org/viewthread.php?tid=53451
+  fontadjust,
+  captionpos=t,
+  framextopmargin=2pt,framexbottommargin=2pt,abovecaptionskip=-3pt,belowcaptionskip=3pt,
+  xleftmargin=4em,xrightmargin=4em, % 设定listing左右的空白
+  texcl=true,
+  % 设定中文冲突，断行，列模式，数学环境输入，listing 数字的样式
+  extendedchars=false,columns=flexible,mathescape=true
+  % numbersep=-1em
+}
+\renewcommand{\figurename}{\zihaowu{图}}
+\renewcommand{\tablename}{\zihaowu{表}}
+\renewcommand{\abstractname}{\zihaoxiaosi{摘 \qquad 要}}
+\renewcommand{\contentsname}{\centerline{\Large 目 \qquad 录}}
+\renewcommand{\refname}{\centerline{\Large 参考文献}}
+%\pagestyle{headings}
+\begin{document}
+\title{机器学习作业一}
+\author{对Adults数据集，做了4个分类器}
+\date{\today}
+\maketitle
+
+\paragraph{小组成员}
+\begin{itemize}
+  \item 马凌霄
+  \begin{itemize}
+    \item 学号：1501111302
+    \item 院系：信息科学技术学院
+    \item 邮箱：xysmlx@pku.edu.cn
+    \item 分工：k-Nearest Neighbors，GPU加速的k-Nearest Neighbors，数据预处理，数据可视化，综合测试对比，实验报告\LaTeX排版
+  \end{itemize}
+  \item 李奕
+  \begin{itemize}
+    \item 学号：1501214394
+    \item 院系：信息科学技术学院
+    \item 邮箱：xysmlx@gmail.com
+    \item 分工：Logistics Regression，Support Vector Machine，Naive Bayes
+  \end{itemize}
+\end{itemize}
+
+\ \\
+
+\begin{abstract}
+本文选取
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+\section{背景介绍}
+\subsection{数据介绍：Adult Data Set}
+本文选取UCI Machine Learning Repository中的Adult数据集 \footnote{\url{https://archive.ics.uci.edu/ml/datasets/Adult}}。
+
+Adult数据集是根据某人的各种信息预测他的收入是否超过50,000/年。
+
+Adult数据集有48842条记录。Adult数据集的每条记录有以下信息：
+\begin{itemize}
+\item age: continuous.
+\item workclass: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.
+\item fnlwgt: continuous.
+\item education: Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool.
+education-num: continuous.
+\item marital-status: Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse.
+\item occupation: Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces.
+\item relationship: Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried.
+\item race: White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black.
+\item sex: Female, Male.
+\item capital-gain: continuous.
+\item capital-loss: continuous.
+\item hours-per-week: continuous.
+\item native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad\&Tobago, Peru, Hong, Holand-Netherlands.
+\end{itemize}
+\subsection{GPU加速机器学习 \& CUDA介绍}
+
+\subsection{测试环境}
+测试使用了两台计算机及其GPU进行测试，硬件配置和编译器版本如表\ref{tab:computer1}-\ref{tab:compiler}所示。
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu 计算机1}
+    \begin{tabular}{L{3cm}|L{10cm}}
+    \toprule
+    项目  & 详细信息\\
+    \midrule
+    CPU   & Core i7-2630QM (2.0GHz, 4 Cores, 6MB L3 Cache) \\
+    内存    & 10GB DDR3 1333MHz \\
+    测试所用磁盘 & 480GB Sandisk Extreme Pro SSD (Read: 550MB/s) \\
+    操作系统  & Windows 10 Professional x64 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:computer1}%
+\end{table}%
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu 计算机2}
+    \begin{tabular}{L{3cm}|L{10cm}}
+    \toprule
+    项目  & 详细信息\\
+    \midrule
+    CPU   & Core i5-4460 (3.2GHz, 4 Cores, 6MB L3 Cache) \\
+    内存    & 16GB DDR3 1600MHz \\
+    测试所用磁盘 & 1TB Seagate 7200RPM HDD (Read: 121MB/s) \\
+    操作系统  & Windows 10 Professional x64 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:computer2}%
+\end{table}%
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu GPU1}
+    \begin{tabular}{L{3cm}|L{10cm}}
+    \toprule
+    项目  & 详细信息\\
+    \midrule
+    型号   & nVIDIA GT550M \\
+    流处理器    &  1480 MHz$\times$ 96 Cores  \\
+    显存 & 2GB DDR3 900MHz \\
+    显存位宽  & 128bit \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:gpu1}%
+\end{table}%
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu GPU2}
+    \begin{tabular}{L{3cm}|L{10cm}}
+    \toprule
+    项目  & 详细信息\\
+    \midrule
+    型号   & nVIDIA GTX745 \\
+    流处理器    &  1033 MHz$\times$ 384 Cores  \\
+    显存 & 4GB DDR3 \\
+    显存位宽  & 128bit \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:gpu2}%
+\end{table}%
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu 编译器版本}
+    \begin{tabular}{L{3cm}|L{10cm}}
+    \toprule
+    项目  & 版本\\
+    \midrule
+    C/C++   & Microsoft Visual Studio 2013 \\
+    C/C++    &  GNU C++ 4.8  \\
+    Python & Python 3.5 \\
+    GPU  & CUDA 7.5 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:compiler}%
+\end{table}%
+
+\subsection{评价指标}
+本文选取精确度（Precision）、准确率（Accuracy）、召回率（Recall）、转移性（Specificity）、F-measure这五个指标作为评价指标。
+
+假设原始样本中有两类，其中：
+\begin{itemize}
+  \item 总共有$P$个类别为1的样本，假设类别1为正例。
+  \item 总共有$N$个类别为0的样本，假设类别0为负例。
+\end{itemize}
+经过分类后：
+\begin{itemize}
+  \item 有 $TP$个类别为1 的样本被系统正确判定为类别1，$FN$ 个类别为1 的样本被系统误判定为类别 0，显然有$P=TP+FN$；
+  \item 有 $FP$ 个类别为0 的样本被系统误判断定为类别1，$TN$ 个类别为0 的样本被系统正确判为类别 0，显然有$N=FP+TN$；
+\end{itemize}
+
+\begin{defn}
+精确度（Precision）：
+$$P = \frac{TP}{(TP+FP)}$$
+反映了被分类器判定的正例中真正的正例样本的比重。
+\end{defn}
+
+\begin{defn}
+准确率（Accuracy）：
+$$A = \frac{(TP + TN)}{(P+N)} = \frac{(TP + TN)}{(TP + FN + FP + TN)}$$
+反映了分类器统对整个样本的判定能力——能将正的判定为正，负的判定为负。
+\end{defn}
+
+\begin{defn}
+召回率(Recall)，也称为 True Positive Rate:
+$$R = \frac{TP}{(TP+FN)} = 1 - \frac{FN}{T}$$
+反映了被正确判定的正例占总的正例的比重 。
+\end{defn}
+
+\begin{defn}
+转移性（Specificity），也称为 True Negative Rate：
+$$S = \frac{TN}{(TN + FP)} = 1 - \frac{FP}{N}$$
+明显的这个和召回率是对应的指标，只是用它在衡量类别0的判定能力。
+\end{defn}
+
+\begin{defn}
+F-measure：
+$$F = \frac{2 *  \mbox{召回率} \times  \mbox{准确率}}{(\mbox{召回率}+\mbox{准确率})}$$
+\end{defn}
+
+\section{数据处理}
+\subsection{数据预处理}
+由于仅使用原数据在各个算法中测试的结果均不太好，所以需要对数据进行预处理，根据多次调整数据预处理并且进行实验，得出最佳的数据预处理方法如下所示：
+\begin{itemize}
+  \item 删去不完整的记录。
+  \item 删去fnlwgt、education-num、marital-status、capital-gain、capital-loss、native-country。
+  \item 对于hours-per-week
+  \begin{itemize}
+    \item 数值$\leq 39$，标记为0；
+    \item 数值$>39$，标记为1；
+  \end{itemize}
+  \item 将age离散化：分为11组分别标记为$0-10$：$\leq 20$，$21-25$，$26-31$，$32-36$，$37-40$，$41-46$，$47-51$，$52-56$，$57-60$，$61-66$，$>66$
+\end{itemize}
+
+经过预处理后，数据集变为：45222条记录，每条记录有8个信息和1个最终标记。
+
+\subsection{训练集与测试集划分：10-fold cross-validation}
+
+\section{k-Nearest Neighbors}
+
+\subsection{算法简介}
+
+\subsection{算法实现}
+
+\subsection{GPU加速的算法实现}
+
+\subsection{实验}
+
+\section{Logistics Regression}
+
+\subsection{算法简介}
+
+\subsection{算法实现}
+
+\subsection{GPU加速的算法实现}
+
+\subsection{实验}
+
+\section{Support Vector Machine}
+
+\subsection{算法简介}
+
+\subsection{算法实现}
+
+\subsection{实验}
+
+\section{Naive Bayes}
+
+\subsection{算法简介}
+
+\subsection{算法实现}
+
+\subsection{实验}
+
+\section{综合测试对比}
+
+\section{总结}
+
+%\begin{algorithm}[H]
+%\caption{gSpan算法SubMining过程}
+%\label{alg:submining}
+%\KwIn{图集合$G$, 阈值$minSup$, 频繁边集和$FreqEdge$, 当前DFSCODE$dfscode$}
+%\KwOut{频繁子图}
+%\Fn{SubMining($G$,$dfscode$,$FreqEdge$,$minSup$)}
+%{
+%    构建一条边（根据规则正行或反向）的DFSCODE $df$\;
+%    $dfscode=dfscode+df$\;
+%    \If{$dfscode$是最小DFSCODE}
+%    {
+%        计算$dfscode$的频率$Sup$\;
+%        \If{$Sup\geq minSup$}
+%        {
+%            SubMining($G$,$dfscode$,$FreqEdge$,$minSup$)\;
+%        }
+%        return\;
+%    }
+%}
+%\end{algorithm}
+
+
+%\subsection{运行速度测试}
+%\subsubsection{测试数据}
+%测试数据为graph.data：图集合中有10000个图，每个图最大点数不超过250，边数不超过250。
+%\subsubsection{测试结果}
+%使用Xifeng Yan, Jiawei Han的原作者的程序 \footnote{\url{http://www.cs.ucsb.edu/~xyan/software/gSpan2009-02-20/gSpan6.tar.gz}}进行运行速度测试的对比，$minSup$阈值选取和运行时间数据如表\ref{tab:runtime}所示。运行时间作图如图\ref{fig:runtime}所示。
+%\begin{figure}[H]
+%  \centering
+%  \includegraphics[width=350 pt]{runtime.eps}
+%  \caption{\zihaowu 运行时间测试}\label{fig:runtime}
+%\end{figure}
+%
+%
+%\begin{table}[H]
+%  \centering
+%  \caption{\zihaowu 运行时间测试}
+%    \begin{tabular}{R{2cm}R{4cm}R{4cm}}
+%    \toprule
+%    minSup & My(ms) & Yan(ms) \\
+%    \midrule
+%    0.9   & 2050  & 1837 \\
+%    0.8   & 2790  & 2299 \\
+%    0.7   & 3520  & 4298 \\
+%    0.6   & 8510  & 4554 \\
+%    0.5   & 14920 & 5749 \\
+%    0.4   & 13690 & 6001 \\
+%    0.3   & 22620 & 7318 \\
+%    0.2   & 25940 & 11164 \\
+%    0.1   & 85820 & 23648 \\
+%    0.09  & 96650 & 26878 \\
+%    0.08  & 87780 & 31235 \\
+%    0.07  & 133020 & 36047 \\
+%    0.06  & 146220 & 45141 \\
+%    0.05  & 178760 & 58311 \\
+%    0.04  & 227410 & 75880 \\
+%    0.03  & 387420 & 119003 \\
+%    0.02  & 772316 & 282170 \\
+%    0.01  & 4421358 & 1175110 \\
+%    \bottomrule
+%    \end{tabular}%
+%  \label{tab:runtime}%
+%\end{table}%
+%
+%
+%从表\ref{tab:runtime}和图\ref{fig:runtime}看出，本程序的性能不如原作者的程序的性能。还有一些优化可以加入，但是因为时间的原因，所以没有加入程序。
+
+
+\newpage
+
+\begin{thebibliography}{100}
+\bibitem[1]{bib:gspanpaper}Yan, Xifeng, and Jiawei Han. "gspan: Graph-based substructure pattern mining." Data Mining, 2002. ICDM 2003. Proceedings. 2002 IEEE International Conference on. IEEE, 2002.
+\bibitem[2]{bib:mrgspan}Lin, Wenqing, Xiaokui Xiao, and Gabriel Ghinita. "Large-scale frequent subgraph mining in mapreduce." Data Engineering (ICDE), 2014 IEEE 30th International Conference on. IEEE, 2014.
+\bibitem[3]{bib:gpugspan}Kessl, Robert, et al. "Parallel Graph Mining with GPUs." The 3rd International Workshop on Big Data, Streams and Heterogeneous Source Mining: Algorithms, Systems, Programming Models and Applications. 2014.
+\end{thebibliography}
+
+\end{document}
