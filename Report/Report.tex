@@ -118,38 +118,40 @@
 %\pagestyle{headings}
 \begin{document}
 \title{»úÆ÷Ñ§Ï°×÷ÒµÒ»}
-\author{¶ÔAdultsÊı¾İ¼¯£¬×öÁË4¸ö·ÖÀàÆ÷}
-\date{\today}
+\author{ÂíÁèÏö(1501111302)\ \ \ \ \ \ \ \ \ \ ÀîŞÈ(1501214394)}
+\date{Adult Data Set}
 \maketitle
 
-\paragraph{Ğ¡×é³ÉÔ±}
-\begin{itemize}
-  \item ÂíÁèÏö
-  \begin{itemize}
-    \item Ñ§ºÅ£º1501111302
-    \item ÔºÏµ£ºĞÅÏ¢¿ÆÑ§¼¼ÊõÑ§Ôº
-    \item ÓÊÏä£ºxysmlx@pku.edu.cn
-    \item ·Ö¹¤£ºk-Nearest Neighbors£¬GPU¼ÓËÙµÄk-Nearest Neighbors£¬Êı¾İÔ¤´¦Àí£¬Êı¾İ¿ÉÊÓ»¯£¬×ÛºÏ²âÊÔ¶Ô±È£¬ÊµÑé±¨¸æ\LaTeXÅÅ°æ
-  \end{itemize}
-  \item ÀîŞÈ
-  \begin{itemize}
-    \item Ñ§ºÅ£º1501214394
-    \item ÔºÏµ£ºĞÅÏ¢¿ÆÑ§¼¼ÊõÑ§Ôº
-    \item ÓÊÏä£ºxysmlx@gmail.com
-    \item ·Ö¹¤£ºLogistics Regression£¬Support Vector Machine£¬Naive Bayes
-  \end{itemize}
-\end{itemize}
-
-\ \\
-
 \begin{abstract}
-±¾ÎÄÑ¡È¡
+±¾ÎÄÒÔUCI Machine Learning RepositoryµÄAdult Data SetÎªÊı¾İ¼¯£¬¸ÃÊı¾İ¼¯Ä¿Ç°È¡µÃµÄ×î¸ß·ÖÀà×¼È·ÂÊÎª$86.2\%$¡£ÎÒÃÇÑµÁ·k-Nearest Neighbors(KNN£©, Logistics Regression(LR)£¬Support Vector Machine(SVM)Èı¸ö·ÖÀàÆ÷£¬·Ö±ğÈ¡µÃÁË$81.98\%$£¬$81.23\%$£¬$83.25\%$µÄ×îºÃ·ÖÀà×¼È·ÂÊ¡£
+
+Ê×ÏÈ£¬ÎÒÃÇ¶ÔÊı¾İ½øĞĞÁËÔ¤´¦Àí£¬É¾³ıÁË²»ÍêÕû¼ÇÂ¼£¬Ãû´ÊĞÔÊôĞÔ×ª»»³ÉÊıÖµĞÍÊıÖµ£¬½«Ä³Ğ©ÊôĞÔÖµÀëÉ¢»¯£¬É¾³ıÄ³Ğ©ÊôĞÔÏîµÈ£»ÎªÁË½â¾öÕı¸ºÑù±¾²»¾ùÔÈµÄÇé¿ö£¬Èı¸ö·ÖÀàÆ÷¶¼²ÉÓÃÁËÑù±¾È¨ÖØĞŞÕı£¬Í¬Ê±ÎªÁË¼Ó¿ì·ÖÀàËÙ¶È£¬KNN²ÉÓÃCUDAµÄGPU¼ÓËÙ£¬È¡µÃÁËËÙ¶È±ÈCPU¿ìÁË4±¶µÄĞ§¹û£¬¶ÔKÖµ½øĞĞÁË²ÎÊıÔñÓÅ£»LRºÍSVM·ÖÀàÆ÷µ÷ÓÃÁËpythonÖĞscikit-learn package, ²¢¶ÔLRµÄÕıÔò·½·¨£¬ÕıÔòÏµÊıºÍSVMµÄºËº¯Êı£¬ºËº¯ÊıÏµÊı£¬³Í·£ÏµÊı½øĞĞÁË²ÎÊıÔñÓÅ¡£
+
+ÊµÑé½á¹û±íÃ÷£¬SVMÔÚadultÊı¾İ¼¯È¡µÃÁË×îºÃµÄĞ§¹û£¬LRºÄÊ±×î¶Ì£¬¶øKNN²ÉÓÃĞÂÓ±µÄGPU¼ÓËÙ£¬ÖµµÃ³ÖĞøÌ½Ë÷¡£µ«ÊÇÓÉÓÚÊ±¼äÓĞÏŞ£¬»¹ÓĞºÜ¶àÖµµÃË¼¿¼µÄµØ·½£¬±ÈÈçÊı¾İÔ¤´¦Àí£¬·ÖÀàÆ÷ÑµÁ·ËÙ¶ÈÓÅ»¯µÈ¡£
 \end{abstract}
 
 \newpage
 \tableofcontents
 \newpage
 \section{±³¾°½éÉÜ}
+\subsection{Ğ¡×é³ÉÔ±ºÍ·Ö¹¤}
+\begin{itemize}
+  \item ÂíÁèÏö
+  \begin{itemize}
+    \item Ñ§ºÅ£º1501111302
+    \item ÔºÏµ£ºĞÅÏ¢¿ÆÑ§¼¼ÊõÑ§Ôº
+    \item ÓÊÏä£ºxysmlx@pku.edu.cn
+    \item ·Ö¹¤£ºk-Nearest Neighbors£¬GPU¼ÓËÙkNN£¬Êı¾İÔ¤´¦Àí£¬Êı¾İ¿ÉÊÓ»¯£¬ÊµÑé±¨¸æ\LaTeXÅÅ°æ
+  \end{itemize}
+  \item ÀîŞÈ
+  \begin{itemize}
+    \item Ñ§ºÅ£º1501214394
+    \item ÔºÏµ£ºĞÅÏ¢¿ÆÑ§¼¼ÊõÑ§Ôº
+    \item ÓÊÏä£ºliyi193328@163.com
+    \item ·Ö¹¤£ºLogistics Regression£¬Support Vector Machine£¬Êı¾İÔ¤´¦Àí
+  \end{itemize}
+\end{itemize}
+
 \subsection{Êı¾İ½éÉÜ£ºAdult Data Set}
 ±¾ÎÄÑ¡È¡UCI Machine Learning RepositoryÖĞµÄAdultÊı¾İ¼¯ \footnote{\url{https://archive.ics.uci.edu/ml/datasets/Adult}}¡£
 
@@ -172,7 +174,6 @@ education-num: continuous.
 \item hours-per-week: continuous.
 \item native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad\&Tobago, Peru, Hong, Holand-Netherlands.
 \end{itemize}
-\subsection{GPU¼ÓËÙ»úÆ÷Ñ§Ï° \& CUDA½éÉÜ}
 
 \subsection{²âÊÔ»·¾³}
 ²âÊÔÊ¹ÓÃÁËÁ½Ì¨¼ÆËã»ú¼°ÆäGPU½øĞĞ²âÊÔ£¬Ó²¼şÅäÖÃºÍ±àÒëÆ÷°æ±¾Èç±í\ref{tab:computer1}-\ref{tab:compiler}ËùÊ¾¡£
@@ -250,7 +251,7 @@ education-num: continuous.
     \midrule
     C/C++   & Microsoft Visual Studio 2013 \\
     C/C++    &  GNU C++ 4.8  \\
-    Python & Python 3.5 \\
+    Python & Python 3.4 \\
     GPU  & CUDA 7.5 \\
     \bottomrule
     \end{tabular}%
@@ -304,6 +305,7 @@ $$F = \frac{2 *  \mbox{ÕÙ»ØÂÊ} \times  \mbox{×¼È·ÂÊ}}{(\mbox{ÕÙ»ØÂÊ}+\mbox{×¼È·Â
 \subsection{Êı¾İÔ¤´¦Àí}
 ÓÉÓÚ½öÊ¹ÓÃÔ­Êı¾İÔÚ¸÷¸öËã·¨ÖĞ²âÊÔµÄ½á¹û¾ù²»Ì«ºÃ£¬ËùÒÔĞèÒª¶ÔÊı¾İ½øĞĞÔ¤´¦Àí£¬¸ù¾İ¶à´Îµ÷ÕûÊı¾İÔ¤´¦Àí²¢ÇÒ½øĞĞÊµÑé£¬µÃ³ö×î¼ÑµÄÊı¾İÔ¤´¦Àí·½·¨ÈçÏÂËùÊ¾£º
 \begin{itemize}
+  \item ½«×Ö·û´®±êÇ©×ª»¯Îª$0,1,2,3$ÕâÑùµÄ±êÇ©¡£
   \item É¾È¥²»ÍêÕûµÄ¼ÇÂ¼¡£
   \item É¾È¥fnlwgt¡¢education-num¡¢marital-status¡¢capital-gain¡¢capital-loss¡¢native-country¡£
   \item ¶ÔÓÚhours-per-week
@@ -314,124 +316,1214 @@ $$F = \frac{2 *  \mbox{ÕÙ»ØÂÊ} \times  \mbox{×¼È·ÂÊ}}{(\mbox{ÕÙ»ØÂÊ}+\mbox{×¼È·Â
   \item ½«ageÀëÉ¢»¯£º·ÖÎª11×é·Ö±ğ±ê¼ÇÎª$0-10$£º$\leq 20$£¬$21-25$£¬$26-31$£¬$32-36$£¬$37-40$£¬$41-46$£¬$47-51$£¬$52-56$£¬$57-60$£¬$61-66$£¬$>66$
 \end{itemize}
 
-¾­¹ıÔ¤´¦Àíºó£¬Êı¾İ¼¯±äÎª£º45222Ìõ¼ÇÂ¼£¬Ã¿Ìõ¼ÇÂ¼ÓĞ8¸öĞÅÏ¢ºÍ1¸ö×îÖÕ±ê¼Ç¡£
+¾­¹ıÔ¤´¦Àíºó£¬Êı¾İ¼¯±äÎª£º45222Ìõ¼ÇÂ¼£¬Ã¿Ìõ¼ÇÂ¼ÓĞ8¸öĞÅÏ¢ºÍ1¸ö×îÖÕ±ê¼Ç¡£Êı¾İÑùÀıÈçÍ¼\ref{fig:adult}ËùÊ¾¡£
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=350 pt]{adult.jpg}
+  \caption{\zihaowu Ô¤´¦ÀíºóµÄAdultÊı¾İ¼¯}\label{fig:adult}
+\end{figure}
 
 \subsection{ÑµÁ·¼¯Óë²âÊÔ¼¯»®·Ö£º10-fold cross-validation}
+±¾ÎÄÊ¹ÓÃ10ÕÛ½»²æÑéÖ¤£¨10-fold cross-validation£©µÄ·½·¨½øĞĞÑµÁ·¼¯ºÍ²âÊÔ¼¯µÄ»®·Ö£º½«Êı¾İ¼¯°´ÕÕ$9:1$»®·ÖÎªÑµÁ·¼¯ºÍ²âÊÔ¼¯£¬ÖØ¸´10´Î£¬Ã¿´ÎÑ¡È¡²»Í¬µÄ$10\%$×÷Îª²âÊÔ¼¯£¬ÆäÓà$90\%$×÷Îª²âÊÔ¼¯£¬È¡10´ÎµÄÆ½¾ùÖµ×÷Îª×îÖÕµÄ²âÊÔ½á¹û¡£
 
 \section{k-Nearest Neighbors}
 
 \subsection{Ëã·¨¼ò½é}
+k-Nearest NeighborsËã·¨µÄË¼ÏëÊÇ£ºÈç¹ûÒ»¸öÑù±¾ÔÚÌØÕ÷¿Õ¼äÖĞµÄ$k$¸ö×îÏàËÆ£¨¼´ÌØÕ÷¿Õ¼äÖĞ×îÁÚ½ü£©µÄÑù±¾ÖĞµÄ´ó¶àÊıÊôÓÚÄ³Ò»¸öÀà±ğ£¬Ôò¸ÃÑù±¾Ò²ÊôÓÚÕâ¸öÀà±ğ¡£
+
+k-Nearest NeighborsËã·¨µÄÁ÷³ÌÈçËã·¨\ref{alg:knn}ËùÊ¾¡£
+
+\begin{algorithm}[H]
+\caption{k-Nearest Neighbors}
+\label{alg:knn}
+\KwIn{ÑµÁ·Êı¾İ¼¯$D$, ²âÊÔÊı¾İ¼¯$T$, ãĞÖµ$K$}
+\KwOut{Ô¤²âµÄ±êÇ©}
+\Fn{kNN($D$,$T$,$K$)}
+{
+    ³õÊ¼»¯¾àÀëÎª×î´óÖµ\;
+    \For{$t\in T$}
+    {
+        \For{$d\in D$}
+        {
+            ¼ÆËã$t$Óë$d\in D$µÄ¾àÀë$dis$\;
+            sort(dis)\;
+            µÃµ½Ä¿Ç°$K$¸ö×îÁÙ½üÑù±¾ÖĞµÄ×î´ó¾àÀë$maxdis$\;
+            \If{$dis<maxdis$}{½«¸ÃÑµÁ·Ñù±¾×÷Îª$K$-×î½üÁÚÑù±¾\;}
+        }
+        Í³¼Æ$K$-×î½üÁÚÑù±¾ÖĞÃ¿¸öÀà±êºÅ³öÏÖµÄ´ÎÊı\;
+        Ñ¡Ôñ³öÏÖÆµÂÊ×î´óµÄÀà±êºÅ×÷ÎªÎ´ÖªÑù±¾µÄÀà±êºÅ\;
+    }
+}
+\end{algorithm}
+
+Ê¹ÓÃµÄ¾àÀë¶ÈÁ¿ÎªÅ·Ê½¾àÀë£¬ÈçÊ½\ref{equ:dis}ËùÊ¾¡£
+
+\begin{equation}\label{equ:dis}
+dis(A,B)=\sqrt{\sum^{n}_{i=1}{(A_i-B_i)}^2}
+\end{equation}
 
 \subsection{Ëã·¨ÊµÏÖ}
+\begin{itemize}
+  \item ÓïÑÔ£ºC++
+  \item Ê¹ÓÃµÄ¿â£ºÎŞ
+\end{itemize}
+
+k-Nearest NeighborsµÄ¸÷¸öº¯Êı¶¨ÒåÈçÏÂËùÊ¾£º
+\begin{lstlisting}[language=c++]
+class KNN
+{
+public:
+	static const int maxCol = 10;
+	static const int maxRow = 46010;
+
+	static const int testNum = 4000; // Data number for test
+
+public:
+	struct Node
+	{
+		double data[maxCol];
+		string label;
+	};
+
+	struct CMP
+	{
+		bool operator ()(const prid &A, const prid &B) const
+		{
+			return A.second < B.second;
+		}
+	};
+
+public:
+	void init(int _k, int _row, int _col, string path); // init
+	void input(); // Input data
+	void ZScoreNorm(); // Z-Score Norm
+	void MaxMinNorm(); // Max min Norm
+	double dis(const Node &A, const Node &B); // Calculate distance between A and B
+	void CalDis(); // Calculate distance between dataTest and dataTrain
+	string MaxFreqLabel(); // Calculate freq label
+	void knn(); // Run knn
+	void debug(); // For debug
+
+public:
+	ifstream fin;
+	string filepath;
+
+	int therK;
+	int row;
+	int col;
+
+	Node dataSet[maxRow];
+	Node dataTest;
+
+	vector<prid> vec;
+	map<string, int> mp;
+};
+\end{lstlisting}
+
+\paragraph{±äÁ¿¼ò½é}
+\begin{itemize}
+  \item struct Node£º´æ´¢Ò»Ìõ¼ÇÂ¼µÄ½á¹¹Ìå¡£
+  \begin{itemize}
+    \item $double\ data[maxCol]$£º´æ´¢Ò»Ìõ¼ÇÂ¼µÄÃ¿¸öĞÅÏ¢¡£
+    \item $string\ label$£º´æ´¢¸Ã¼ÇÂ¼µÄ±êÇ©¡£
+  \end{itemize}
+  \item $ifstream\ fin$£ºÎÄ¼şÊäÈë£¬ÓÃÓÚ¶ÁÈ¡ÎÄ¼ş¡£
+  \item $string\ filepath$£ºÊäÈëÎÄ¼şµÄÂ·¾¶¡£
+  \item $int\ therK$£ºkNNµÄãĞÖµ$K$¡£
+  \item $int\ row$£º¼ÇÂ¼µÄÌõÊı£¨ĞĞÊı£©¡£
+  \item $int\ col$£º¼ÇÂ¼µÄÁĞÊı¡£
+  \item $Node\ dataSet[maxRow]$£º´æ´¢Õû¸ö¼ÇÂ¼¡£
+  \item $vector<prid>\ vec$£º´æ´¢$int,double$µÄ$pair$£¬$int$Îª¸Ã¼ÇÂ¼ÔÚ$dataSet$µÄÏÂ±ê£¬$double$Îª¸Ã¼ÇÂ¼Óë²âÊÔÊı¾İµÄ¾àÀë¡£
+  \item $map<string, int>\ mp$£ºÓÃÓÚÍ³¼ÆÄ³±êÇ©³öÏÖµÄ´ÎÊı¡£
+\end{itemize}
+
+\paragraph{º¯Êı¼ò½é}
+\begin{itemize}
+  \item $void\ init(int\ \_k, int\ \_row, int\ \_col, string\ path)$£º³õÊ¼»¯ËùÓĞ±äÁ¿
+  \begin{itemize}
+    \item ÊäÈë£ºkNNµÄãĞÖµ$\_k$£¬Êı¾İ¼¯µÄĞĞÊı$\_row$£¬Êı¾İ¼¯µÄÁĞÊı$\_col$£¬Êı¾İÎÄ¼şÂ·¾¶$path$
+    \item Êä³ö£ºÎŞ£¬³õÊ¼»¯ºÃµÄ±äÁ¿
+  \end{itemize}
+  \item $void\ input()$£ºÊ¹ÓÃifstream´ÓÊı¾İÎÄ¼ş¶ÁÈ¡Êı¾İ
+  \item $void\ ZScoreNorm()$£ºZ-Score±ê×¼»¯
+  \item $void\ MaxMinNorm()$£ºMax-Min±ê×¼»¯
+  \item $double\ dis(const\ Node\ \&A, const\ Node\ \&B)$£º°´ÕÕÊ½\ref{equ:dis}¼ÆËãÊı¾İ¼ÇÂ¼AºÍBµÄ¾àÀë
+  \begin{itemize}
+    \item ÊäÈë£ºÊı¾İ¼ÇÂ¼A£¬Êı¾İ¼ÇÂ¼B
+    \item Êä³ö£ºAºÍBµÄ¾àÀë
+  \end{itemize}
+  \item $void\ CalDis()$£º¼ÆËã²âÊÔÊı¾İ¼ÇÂ¼ÓëËùÓĞÑµÁ·Êı¾İ¼ÇÂ¼µÄ¾àÀë
+  \begin{itemize}
+    \item ÊäÈë£º²âÊÔÊı¾İ¼ÇÂ¼£¬ÑµÁ·Êı¾İ¼ÇÂ¼¼¯ºÏ
+    \item Êä³ö£º²âÊÔÊı¾İ¼ÇÂ¼ÓëËùÓĞÑµÁ·Êı¾İ¼ÇÂ¼µÄ¾àÀë£¬ÓÃvectorÊä³ö
+    \item Á÷³Ì£º±éÀúÒ»±éÑµÁ·Êı¾İ¼ÇÂ¼¼¯ºÏ£¬µ÷ÓÃdisº¯Êı¼ÆËãËùÓĞµÄ¾àÀë
+  \end{itemize}
+  \item $string\ MaxFreqLabel()$£ºÕÒ³ö³öÏÖ´ÎÊı×î¸ßµÄlabel£¬
+  \begin{itemize}
+    \item ÊäÈë£º²âÊÔÊı¾İ¼ÇÂ¼£¬ÑµÁ·Êı¾İ¼ÇÂ¼¼¯ºÏ
+    \item Êä³ö£ºÔ¤²âµÃµ½µÄ±êÇ©
+    \item Á÷³Ì£º
+    \begin{enumerate}
+      \item µ÷ÓÃ$CalDis()$¼ÆËãÎ´ÖªÑù±¾ºÍÃ¿¸öÑµÁ·Ñù±¾µÄ¾àÀë$dis$
+      \item µÃµ½Ä¿Ç°$K$¸ö×îÁÙ½üÑù±¾ÖĞµÄ×î´ó¾àÀë$maxdis$
+      \item Èç¹û$dis$Ğ¡ÓÚ$maxdis$£¬Ôò½«¸ÃÑµÁ·Ñù±¾×÷Îª$K-$×î½üÁÚÑù±¾
+      \item ¶ÔÓÚÃ¿¸öÑµÁ·Ñù±¾£¬Ö´ĞĞ1-3²½
+      \item Í³¼Æ$K-$×î½üÁÚÑù±¾ÖĞÃ¿¸öÀà±êºÅ³öÏÖµÄ´ÎÊı
+      \item Ñ¡Ôñ³öÏÖ´ÎÊı×î´óµÄ×÷ÎªÔ¤²â±êÇ©£¬return±êÇ©
+    \end{enumerate}
+  \end{itemize}
+  \item $void\ knn()$£ºkNNÖ÷¿Ø
+  \begin{itemize}
+    \item Á÷³Ì£º
+    \begin{enumerate}
+      \item ¶ÔÓÚÒ»¸ö²âÊÔÑù±¾£¬µ÷ÓÃ$MaxFreqLabel()$
+      \item ÅĞ¶ÏÕıÈ·Óë·ñ£¬Í³¼ÆTP¡¢TN¡¢FP¡¢FN
+      \item ¶ÔÓÚÃ¿¸ö²âÊÔÑù±¾£¬Ö´ĞĞ1-2²½
+      \item ¼ÆËã¾«È·¶È¡¢×¼È·ÂÊ¡¢ÕÙ»ØÂÊ¡¢×ªÒÆĞÔ¡¢F-measure
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+\subsection{GPU¼ÓËÙ»úÆ÷Ñ§Ï° \& CUDA½éÉÜ}
+Ëæ×ÅÊı¾İ¼¯µÄÔö´ó£¬Ä¿Ç°ÒÑÓĞµÄ»úÆ÷Ñ§Ï°Ëã·¨ÑµÁ·´ó¹æÄ£Êı¾İËùĞèÊ±¼äÔ½À´Ô½¶à¡£¶øÇÒ¶ÔÓÚ½ÏÎª¸´ÔÓµÄ»úÆ÷Ñ§Ï°Ëã·¨£¬ÑµÁ·µÄÊ±¼äÒ²·Ç³£¸ß¡£ÓÉÓÚ»úÆ÷Ñ§Ï°Ëã·¨ÓĞ×Å´óÁ¿µü´úµÈÊÊºÏ²¢ĞĞ»¯µÄ¹ı³Ì¶øÇÒÒ»°ãGPUµÄºËĞÄÊıÄÜ´ïµ½3072(nVIDIA TITAN X)¶øÖ÷Á÷CPUºËĞÄÊıÎª4£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃGPUµÄ´óÁ¿¼ÆËãºËĞÄ¼ÓËÙ»úÆ÷Ñ§Ï°Ëã·¨¡£
+
+CUDA£¨Compute Unified Device Architecture£¬Í³Ò»¼ÆËã¼Ü¹¹£©ÊÇÓÉnVIDIAËùÍÆ³öµÄÒ»ÖÖ¼¯³É¼¼Êõ£¬ÊÇ¸Ã¹«Ë¾¶ÔÓÚGPGPUµÄÕıÊ½Ãû³Æ¡£Í¨¹ıCUDA£¬ÓÃ»§¿ÉÀûÓÃnVIDIAµÄÏÔ¿¨½øĞĞGPU¼ÆËã¡£CUDA¿ÉÒÔ¼æÈİOpenCL»òÕß×Ô¼ÒµÄC-±àÒëÆ÷¡£ÎŞÂÛÊÇCUDA C-ÓïÑÔ»òÊÇOpenCL£¬Ö¸Áî×îÖÕ¶¼»á±»Çı¶¯³ÌĞò×ª»»³ÉPTX´úÂë£¬½»ÓÉÏÔÊ¾ºËĞÄ¼ÆËã¡£
+
+Ê¹ÓÃCUDA½øĞĞGPU¼ÓËÙµÄÊı¾İ½»»»Ö÷ÒªÍ¨¹ı¼ÆËã»úÄÚ´æºÍGPUÏÔ´æÖ®¼ä»¥Ïà´«ÊäÊı¾İ¡£ËùÒÔGPU¼ÓËÙµÄ¹ı³Ì¼´Îª£º
+\begin{enumerate}
+  \item °ÑÊı¾İ´ÓÄÚ´æ´«Êäµ½ÏÔ´æ
+  \item ÈÃGPU¶ÔÏÔ´æÖĞµÄÊı¾İ½øĞĞ¼ÆËã£¬°Ñ½á¹ûĞ´ÈëÏÔ´æ
+  \item ½«¼ÆËã½á¹û´ÓÏÔ´æÖĞ´«Êäµ½ÄÚ´æ
+\end{enumerate}
 
 \subsection{GPU¼ÓËÙµÄËã·¨ÊµÏÖ}
+ÔÚÕâÀï£¬GPU¼ÓËÙÖ÷ÒªÔËÓÃÓÚ²âÊÔÑù±¾ÓëÑµÁ·Ñù±¾¼¯ºÏµÄ¾àÀë¼ÆËã¡£Éè¼ÆË¼ÏëÊÇ£º°Ñ²âÊÔÑù±¾ÓëÑµÁ·Ñù±¾¼¯ºÏµÄ¾àÀë¼ÆËã½»¸øGPU¼ÆËã£¬ÈÃGPUÃ¿¸ö¼ÆËãºËĞÄ¼ÆËãÒ»¸ö²âÊÔÑù±¾ÓëÒ»¸öÑµÁ·Ñù±¾µÄ¾àÀë£¬ÔÙÊä³öµ½ÏÔ´æ£¬´«Êä¸øÄÚ´æ¡£
+
+GPU¼ÆËã¾àÀëµÄº¯ÊıÉè¼ÆÈçÏÂËùÊ¾£º
+\begin{lstlisting}[language=c++]
+__global__ void DisKernel(double *traindata, double *testdata, double *dis, int pitch, int N, int D)
+{
+	int tid = blockIdx.x;
+	if (tid < N)
+	{
+		double temp = 0;
+		double sum = 0;
+		for (int i = 0; i < D; i++)
+		{
+			temp = *((double*)((char*)traindata + tid * pitch) + i) - testdata[i];
+			sum += temp * temp;
+		}
+		dis[tid] = sum;
+	}
+}
+\end{lstlisting}
+
+ÆäÓà²¿·ÖºÍ±ê×¼kNNµÄÉè¼ÆÒ»Ñù
 
 \subsection{ÊµÑé}
+\subsubsection{²ÎÊı$K$Ñ¡È¡ÊµÑé}
+$K$Ñ¡È¡3-15£¬Í³¼Æ¾«È·¶È¡¢×¼È·ÂÊ¡¢ÕÙ»ØÂÊ¡¢×ªÒÆĞÔ¡¢F-measure£¬Èç±í\ref{tab:knnselk}ºÍÍ¼\ref{fig:knnselk}ËùÊ¾¡£
+\begin{itemize}
+  \item $K=6$£º´ËÊ±ÕÙ»ØÂÊÎª0.691445×î¸ß£¬F-measureÎª0.748997×î¸ß¡£
+  \item $K=12$£º´ËÊ±×¼È·ÂÊÎª0.81975×î¸ß¡£ÕÙ»ØÂÊºÍF-measureÒ²±È½Ï¸ß¡£ÉèÖÃÎª×îÓÅ²ÎÊı¡£
+\end{itemize}
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu ²ÎÊı$K$Ñ¡È¡ÊµÑé}
+    \begin{tabular}{L{1cm}R{2cm}R{2cm}R{2cm}R{2cm}R{2cm}}
+    \toprule
+    k     & ¾«È·¶È   & ×¼È·ÂÊ   & ÕÙ»ØÂÊ   & ×ªÒÆĞÔ   & F-measure \\
+    \midrule
+    3     & 0.585075 & 0.80225 & 0.611227 & 0.862739 & 0.69383 \\
+    4     & 0.473632 & 0.80975 & 0.672316 & 0.839307 & 0.734661 \\
+    5     & 0.597015 & 0.8065 & 0.619195 & 0.866381 & 0.700544 \\
+    6     & 0.490547 & 0.817 & 0.691445 & 0.844235 & 0.748997 \\
+    7     & 0.581095 & 0.81825 & 0.65618 & 0.86463 & 0.728307 \\
+    8     & 0.514428 & 0.81875 & 0.685676 & 0.849661 & 0.746328 \\
+    9     & 0.591045 & 0.81825 & 0.652747 & 0.86699 & 0.726188 \\
+    10    & 0.508458 & 0.81425 & 0.672368 & 0.847531 & 0.736539 \\
+    11    & 0.587065 & 0.81725 & 0.651214 & 0.865869 & 0.724845 \\
+    12    & 0.528358 & 0.81975 & 0.682519 & 0.852886 & 0.744867 \\
+    13    & 0.573134 & 0.8155 & 0.650847 & 0.862279 & 0.72393 \\
+    14    & 0.528358 & 0.81375 & 0.662095 & 0.851782 & 0.73013 \\
+    15    & 0.569154 & 0.81375 & 0.647059 & 0.86104 & 0.720894 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:knnselk}%
+\end{table}%
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=300 pt]{knnselk.eps}
+  \caption{\zihaowu ²ÎÊı$K$Ñ¡È¡ÊµÑé}\label{fig:knnselk}
+\end{figure}
+\subsubsection{×îÓÅ²ÎÊıÏÂµÄÊµÑé}
+ÓÉÉÏÒ»Ğ¡½Ú¿ÉÖª£¬Ñ¡È¡×îÓÅµÄ$K$ÖµÎª12£¬µ±$K=12$Ê±£¬×¼È·ÂÊ¡¢ÕÙ»ØÂÊ¡¢F-measure¡¢¾«È·ÂÊÈç±í\ref{tab:knn}ËùÊ¾¡£
+
+% Table generated by Excel2LaTeX from sheet 'final'
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu kNN×îÓÅ²ÎÊıÏÂµÄÊµÑé}
+    \begin{tabular}{L{2cm}R{1.5cm}R{1.5cm}R{2cm}R{1.5cm}R{2.5cm}}
+    \toprule
+    Êı¾İ¼¯    & ×¼È·ÂÊ   & ÕÙ»ØÂÊ   & F-measure & ¾«È·ÂÊ   & ×îÓÅ²ÎÊı \\
+    \midrule
+    Ô­Ê¼Êı¾İ   & 0.77025 & 0.589212 & 0.667676 & 0.282587 & k=7 \\
+    ´¦ÀíÊı¾İ   & 0.81975 & 0.682519 & 0.744867 & 0.528358 & k=12 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:knn}%
+\end{table}%
+
+\subsubsection{GPU¼ÓËÙµÄÊµÑé}
+Ê¹ÓÃ±í\ref{tab:computer1}-\ref{tab:compiler}ËùÊ¾µÄ»·¾³£¬½øĞĞ2Ì¨¼ÆËã»úºÍ2¸öGPUµÄ¶Ô±ÈÊµÑé¡£²âµÃ¼ÆËãËùÓÃÊ±¼äÈçÍ¼\ref{fig:knntime}ËùÊ¾£¬²âÊÔ·¢ÏÖGPU¶ÔkNNµÄ¼ÓËÙ³Ì¶È·Ç³£´ó£¬¼´Ê¹ÊÇÈëÃÅ¼¶µÄGPU nVIDIA GT550M£¬ËùĞèµÄÊ±¼ä½öÎªCore-i7¼ÆËãÊ±¼äµÄ$1/4$¡£ËùÒÔGPUÄÜ¹»·Ç³£Ã÷ÏÔµØ¶ÔkNN½øĞĞ¼ÓËÙ¡£
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=300 pt]{knntime.eps}
+  \caption{\zihaowu GPU¼ÓËÙµÄÊµÑé£¨µ¥Î»£ºÃë(s)£©}\label{fig:knntime}
+\end{figure}
 
 \section{Logistics Regression}
 
-\subsection{Ëã·¨¼ò½é}
-
 \subsection{Ëã·¨ÊµÏÖ}
+\begin{itemize}
+  \item ÓïÑÔ£ºPython
+  \item Ê¹ÓÃµÄ¿â£ºscikit-learn, pylearn2
+\end{itemize}
 
-\subsection{GPU¼ÓËÙµÄËã·¨ÊµÏÖ}
+\paragraph{scikit-learn¼òÊö}Logistics»Ø¹éÔÚscikit-learnÖĞµÄº¯Êı½éÉÜ
+\begin{itemize}
+  \item º¯ÊıÄ¬ÈÏ²ÎÊı£º
+\begin{lstlisting}[language=python]
+class sklearn.linear_model.LogisticRegression(penalty='l2', dual=False, tol=0.0001, C=1.0, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver='liblinear', max_iter=100, multi_class='ovr', verbose=0, warm_start=False, n_jobs=1)
+\end{lstlisting}
+  \item ÖØÒª²ÎÊıËµÃ÷£º
+  \begin{itemize}
+    \item $penalty$£º±íÊ¾ÕıÔò·½Ê½£¬¿ÉÓÃµÄ·½Ê½ÊÇ"l1"»òÕß"l2"·Ö±ğ¶ÔÓ¦ÁËl1ºÍl2ÕıÔò·½Ê½
+    \item $C$£ºÄæÕıÔòÏµÊı£¬CÖµÔ½Ğ¡£¬´ú±íÕıÔòÇ¿¶ÈÔ½´ó£»·´Ö®£¬Ô½Ğ¡
+    \item $class\_weight$: ÀàÈ¨ÖØ£¬Èç¹ûÉèÖÃÎª¡±balanced¡±,ÔòÀàµÄÈ¨ÖØ°´ÕÕÕı¸ºÑù±¾±ÈÀı£¬Ò²¿ÉÒÔÓÃ»§×Ô¼ºÉè¶¨
+    \item $n\_jobs$: ²¢ĞĞÏß³ÌÊıÄ¿
+  \end{itemize}
+\end{itemize}
+
+Logistics RegressionºËĞÄ´úÂëÈçÏÂËùÊ¾£º
+\begin{lstlisting}[language=python]
+log_tuned_parameters = [{'penalty': ['l1'],'C': [1, 5, 10, 100]},
+	                    {'penalty': ['l2'], 'C': [1, 5 ,10, 100]}]
+	print("logistic regression:")
+	logS = time.clock()
+	logisticRegression = LogisticRegression()
+	score = "f1_micro"
+	cv =ShuffleSplit(len(trainVec),3,test_size=0.1,random_state=10)
+	clf = GridSearchCV(logisticRegression, log_tuned_parameters, cv=cv, n_jobs =1,scoring='%s' % score)
+	clf.fit(trainVec,trainLabel)
+	print(clf.best_params_)
+	predict = clf.predict(testVec)
+	accuracy = metrics.accuracy_score(testLabel,predict)
+	recall =metrics.recall_score(testLabel, predict,pos_label=None, average='micro')
+	print("accuracy,recall: ",accuracy,recall)
+	print(metrics.classification_report(testLabel,predict))
+	print("confusion_matrix:")
+	cm = metrics.confusion_matrix(testLabel,predict)
+	print(cm)
+	logE = time.clock()
+	print("Logistic Regression time: {0}s".format(logE-logS) )
+\end{lstlisting}
+
+\paragraph{´úÂë½âÊÍ}
+\begin{itemize}
+  \item log\_tuned\_parameters£º±íÊ¾µÄ²ÎÊıµÄ±¸Ñ¡Ïî£¬ÔÚ·ÖÀàÊ±»á³¢ÊÔÃ¿Ò»¸ö¿ÉÄÜ²ÎÊıµÄÃ¿Ò»¸öÈ¡ÖµÇé¿ö£¬²¢Ñ¡Ôñ¸ø¶¨Ìõ¼ş£¨ÕâÀïÊµ¼ÊÉÏÊÇf1\_score»òÕßF-measureÖµ£©µÄ×îÓÅ²ÎÊı
+  \item trainVec, trainLabel±íÊ¾µÄÊÇÑµÁ·Êı¾İµÄÑù±¾ÏòÁ¿ºÍ±êÇ©£»testVec, testLabel±íÊ¾µÄÊÇ²âÊÔÊı¾İÏòÁ¿ºÍ±êÇ©
+  \item GridSearchCVº¯ÊıµÄÄ¿µÄÊÇÔÚÑµÁ·Êı¾İÊ±×Ô¶¯ËÑË÷³ö¸ø¶¨Ä¿±êÏÂ¶à¸ö²ÎÊıµÄ×îÓÅ²ÎÊı£¬ËüµÄµÚÒ»¸ö²ÎÊıÊÇ¶¨ÒåºÃµÄ·ÖÀàÆ÷£¬µÚ¶ş¸ö²ÎÊıÊÇĞèÒªµ÷ÕûµÄ²ÎÊı£¬ËüÊÇÒÔ×Öµä(dict)µÄĞÎÊ½´«ÈëµÄ£¬cv±íÊ¾¶ÔÑµÁ·Êı¾İ²ÉÓÃ½»²æÑéÖ¤µÄ·½Ê½£¬¿ÉÒÔÊÇÕûÊı£¬Ò²¿ÉÒÔÊÇ¶¨ÒåºÃµÄ½»²æÑéÖ¤Àà£¬´ËÊ±ÎÒÃÇ´«ÈëµÄÊÇÒ»¸ö½»²æÑéÖ¤·½Ê½£¨Ê×ÏÈ¶ÔÊı¾İ½øĞĞshuffle£¬°´ÕÕ9:1Êı¾İ·Ö¸î£¬µü´ú10´Î£©£»n\_jobs ÊÇ²¢ĞĞÔËËãµÄÏß³ÌÊıÄ¿£»scoringÊÇÔÚÑ¡Ôñ²ÎÊıµÄ±ê×¼£¬Éè¶¨µÄscoringÊÇf1\_score£¬±íÊ¾ÔÚºòÑ¡²ÎÊıÖĞÑ¡ÔñÊ¹µÃf1\_score×î´óµÄ²ÎÊı×éºÏ
+  \item clf.fit´«ÈëµÄÊÇÑµÁ·Ñù±¾ºÍ±êÇ©£¨Ëü»á×Ô¶¯ÑµÁ·³ö×îÓÅµÄ²ÎÊıºÍ·ÖÀàÆ÷£©£¬È»ºóÓÃclf.predicty×÷ÓÃÔÚpredictÊı¾İÉÏ£¬µÃµ½predictµÄlabel
+  \item metrics.accuracy\_scoreÊäÈëÊÇ²âÊÔÊı¾İÖĞ×¼È·µÄ±êÇ©£¨label£©ºÍÔ¤²âµÄ±êÇ©£¬µÃµ½µÄÊÇÏàÓ¦µÄ×¼È·ÂÊ£»metrics.recall\_scoreµÃµ½ÊÇÕÙ»ØÂÊ; metrics.classification\_report µÃµ½µÄÊÇprecision, recall, f1\_scoreÈı¸öÖ¸±ê£»cm ±í´ïµÄÊÇËüÃÇµÄ»ìÏı¾ØÕó
+\end{itemize}
 
 \subsection{ÊµÑé}
+×¼È·ÂÊ£¬ÕÙ»ØÂÊ£¬F-measure£¬¾«È·ÂÊ¶¼ÊÇ¸ù¾İÕı¸ºÑù±¾Á¿Æ½¾ùµÄ½á¹û£¬Èç±í\ref{tab:logistics}ËùÊ¾¡£
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu Logistics Regression×îÓÅ²ÎÊıÏÂµÄÊµÑé}
+    \begin{tabular}{L{2cm}R{1.5cm}R{1.5cm}R{2cm}R{1.5cm}R{2.5cm}}
+    \toprule
+    Êı¾İ¼¯    & ×¼È·ÂÊ   & ÕÙ»ØÂÊ   & F-measure & ¾«È·ÂÊ   & ×îÓÅ²ÎÊı \\
+    \midrule
+    Ô­Ê¼Êı¾İ  & 0.772937 & 0.789676 & 0.7566677 & 0.768876 & C=0.5 penalty=l1 \\
+    ´¦ÀíÊı¾İ  & 0.814563 & 0.812379 & 0.824573 & 0.815431 & C=1 penalty=l1 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:logistics}%
+\end{table}%
 
 \section{Support Vector Machine}
 
-\subsection{Ëã·¨¼ò½é}
-
 \subsection{Ëã·¨ÊµÏÖ}
+\begin{itemize}
+  \item ÓïÑÔ£ºPython
+  \item Ê¹ÓÃµÄ¿â£ºscikit-learn, pylearn2
+\end{itemize}
+
+SVMÔÚscikit-learnÖĞµÄº¯Êı½éÉÜ£º
+\begin{itemize}
+  \item º¯ÊıÄ¬ÈÏ²ÎÊı£º
+\begin{lstlisting}[language=python]
+class sklearn.svm.SVC(C=1.0, kernel='rbf', degree=3, gamma='auto', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape=None, random_state=None)
+\end{lstlisting}
+  \item ÖØÒª²ÎÊıËµÃ÷£º
+  \begin{itemize}
+    \item $C$£º´íÎóÏîµÄ³Í·£ÏµÊı
+    \item $Kernel$: ºËº¯Êı£¬'linear', 'poly', 'rbf', 'sigmoid', 'precomputed' »òÕß×Ô¼ºÉèÖÃµÄ¿Éµ÷ÓÃµÄºËº¯Êı
+    \item $class\_weight$: ÀàÈ¨ÖØ£¬Èç¹ûÉèÖÃÎª"balanced",ÔòÀàµÄÈ¨ÖØ°´ÕÕÕı¸ºÑù±¾±ÈÀı£¬Ò²¿ÉÒÔÓÃ»§×Ô¼ºÉè¶¨
+    \item $gamma$: ºËº¯ÊıÏµÊı
+    \item $n\_jobs$: ²¢ĞĞÏß³ÌÊıÄ¿	
+  \end{itemize}
+\end{itemize}
+
+SVMºËĞÄ´úÂëÈçÏÂËùÊ¾£º
+\begin{lstlisting}[language=python]
+svm_tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.5],'C': [1, 5, 10, 100]},{'kernel': ['linear'], 'gamma': [0.5],'C': [1, 5, 10, 100]}]
+	print("\nsvm:")
+	svmTS = time.clock()
+	svmKernelway = 'rbf'
+	svrrbf = SVC(kernel=svmKernelway,C=10,gamma=0.5)
+	score = "f1_micro"
+	cv =ShuffleSplit(len(trainVec),2,test_size=0.1,random_state=10)
+	clf =  GridSearchCV(SVC(C=1), svm_tuned_parameters, cv=cv, n_jobs = 2, scoring='%s' % score)
+	clf.fit(trainVec,trainLabel)
+	print(clf.best_params_)
+	testLabel = clf.predict(testVec)
+	accuracy = metrics.accuracy_score(testLabel,predict)
+	recall = metrics.recall_score(testLabel,predict,pos_label=None,average='micro')
+	print("accuracy,recall: ",accuracy,recall)
+	print(metrics.classification_report(testLabel,predict))
+	print("confusion_matrix:")
+	cm = metrics.confusion_matrix(testLabel,predict)
+	print(cm)
+	svmTE = time.clock()
+	print("svm time: {0}s".format(svmTE-svmTS) )
+\end{lstlisting}
+
+\paragraph{´úÂë½âÊÍ}ÔÚscikit-learnÖĞµÄsvm·ÖÀàÆ÷µÄµ÷ÓÃºÍlogistics»Ø¹éµ÷ÓÃ½á¹¹¼¸ºõÒ»ÖÂ£¬Ö»ÊÇÔÚ²ÎÊıÀà±ğº¬Òå²»Ò»ÖÂ£¬Òò´Ë´úÂëºÍlogistics»Ø¹é´úÂëÏà±È½Ï£¬Ö÷ÒªÇø±ğ³ıÁË·ÖÀàÆ÷Ãû×ÖµÄ²î±ğÍâ£¬ÆäÓà¾ÍÊÇ²ÎÊıÉèÖÃ£¬svm\_tuned\_parameters£º´Ë´¦ÎÒÃÇ¶ÔgammaÈ¡¶¨Îª0.5»òÕß1£¬CÖµÉè¶¨Îª1,5,10,100£¬ÔÚÕâĞ©²ÎÊı×éºÏÖĞÑ¡ÔñÊ¹µÃf1\_score×î´óµÄ²ÎÊı×éºÏ¡£
 
 \subsection{ÊµÑé}
+\paragraph{ÎÊÌâ}
+ÔÚ²ÎÊıÑµÁ·¹ı³ÌÖĞ£¬ÓÉÓÚÊı¾İÇĞ¸î²»¾ùÔÈµ¼ÖÂÑµÁ·Ñù±¾»òÕß²âÊÔÑù±¾ÖĞÕı¸ºÑù±¾±ÈÀı²»¾ùÔÈµÄÇé¿ö£¬ÕâÑù»á²úÉúÄ³Ò»ÀàµÄÕÙ»ØÂÊÌØ±ğµÍ£¨ÓĞÊ±»¹»á³öÏÖ0µÄÇé¿ö£©,Èç¹û½ö½öÖ»¿´Õı¸ºÑù±¾ÕÙ»ØÂÊµÄÆ½¾ùÖµ£¬¾Í»á´íÎóµØÈÏÎª·ÖÀàĞ§¹û»¹²»´í£¬µ«ÊÇÕâÖÖÇé¿öÊÇ»ûĞÎµÄ¡£
 
-\section{Naive Bayes}
+\paragraph{½â¾ö°ì·¨}
+Éè¶¨class\_weight²ÎÊıÎª"balanced"»òÕß×Ô¼ºÉè¶¨Ò»¸öÕı¸ºÑù±¾µÄÈ¨ÖØÖµ£¬ÈÃÑù±¾¶àµÄÒ»·½È¨ÖØÉÔÎ¢µÍÒ»Ğ©£¬Ñù±¾ÉÙµÄÒ»·½È¨ÖØ¸ßÒ»Ğ©£¬¶øbalanced²ÎÊıÊÇ¸ù¾İÕı¸ºÑù±¾µÄÊıÁ¿À´Éè¶¨È¨ÖØµÄ£¬ÎÒÃÇµÄ³ÌĞòÀïÃæclass\_weightÉè¶¨¾ÍÊÇbalanced¡£
 
-\subsection{Ëã·¨¼ò½é}
+×¼È·ÂÊ£¬ÕÙ»ØÂÊ£¬F-measure£¬¾«È·ÂÊ¶¼ÊÇ¸ù¾İÕı¸ºÑù±¾Á¿Æ½¾ùµÄ½á¹û£¬Èç±í\ref{tab:svm}ËùÊ¾¡£
 
-\subsection{Ëã·¨ÊµÏÖ}
-
-\subsection{ÊµÑé}
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu SVM×îÓÅ²ÎÊıÏÂµÄÊµÑé}
+    \begin{tabular}{L{2cm}R{1.5cm}R{1.5cm}R{2cm}R{1.5cm}R{2.5cm}}
+    \toprule
+    Êı¾İ¼¯    & ×¼È·ÂÊ   & ÕÙ»ØÂÊ   & F-measure & ¾«È·ÂÊ   & ×îÓÅ²ÎÊı \\
+    \midrule
+    Ô­Ê¼Êı¾İ  & 0.802537 & 0.799656 & 0.806777 & 0.818876 & C=1 gamma=0.5 kernel=rbf \\
+    ´¦ÀíÊı¾İ  & 0.824663 & 0.832479 & 0.835473 & 0.834431 & C=10 gamma=0.5 kernel=rbf \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:svm}%
+\end{table}%
 
 \section{×ÛºÏ²âÊÔ¶Ô±È}
+Ñ¡È¡×¼È·ÂÊ£¬ÕÙ»ØÂÊ£¬F-measure£¬¾«È·ÂÊ×÷ÎªÆÀ¼ÛÖ¸±ê£¬kNN¡¢Logistics RegressionºÍSVMµÄ²âÊÔ½á¹ûÈç±í\ref{tab:alltest}ºÍÍ¼\ref{fig:alltest}ËùÊ¾¡£
+
+k-Nearest Neighbors(KNN£©, Logistics Regression(LR)£¬Support Vector Machine(SVM)Èı¸ö·ÖÀàÆ÷£¬·Ö±ğÈ¡µÃÁË$81.98\%$£¬$81.23\%$£¬$83.25\%$µÄ×îºÃ·ÖÀà×¼È·ÂÊ¡£
+
+²éÔÄÎÄÏ×µÃÖª£¬¸ÃÊı¾İ¼¯Ä¿Ç°×î¸ßµÄ·ÖÀà×¼È·ÂÊÎª$86.2\%$¡£
+
+\begin{table}[H]
+  \centering
+  \caption{\zihaowu ×ÛºÏ²âÊÔ¶Ô±È}
+    \begin{tabular}{L{1.5cm}R{1.5cm}R{1.5cm}R{2cm}R{1.5cm}R{2.5cm}}
+    \toprule
+    Ëã·¨    & ×¼È·ÂÊ   & ÕÙ»ØÂÊ   & F-measure & ¾«È·ÂÊ   & ×îÓÅ²ÎÊı \\
+    \midrule
+    kNN  & 0.81975 & 0.682519 & 0.744867 & 0.528358 & k=12 \\
+    Logistics  & 0.814563 & 0.812379 & 0.824573 & 0.815431 & C=1 penalty=l1 \\
+    SVM  & 0.824663 & 0.832479 & 0.835473 & 0.834431 & C=10 gamma=0.5 kernel=rbf \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:alltest}%
+\end{table}%
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=300 pt]{alltest.eps}
+  \caption{\zihaowu ×ÛºÏ²âÊÔ¶Ô±È}\label{fig:alltest}
+\end{figure}
 
 \section{×Ü½á}
-
-%\begin{algorithm}[H]
-%\caption{gSpanËã·¨SubMining¹ı³Ì}
-%\label{alg:submining}
-%\KwIn{Í¼¼¯ºÏ$G$, ãĞÖµ$minSup$, Æµ·±±ß¼¯ºÍ$FreqEdge$, µ±Ç°DFSCODE$dfscode$}
-%\KwOut{Æµ·±×ÓÍ¼}
-%\Fn{SubMining($G$,$dfscode$,$FreqEdge$,$minSup$)}
-%{
-%    ¹¹½¨Ò»Ìõ±ß£¨¸ù¾İ¹æÔòÕıĞĞ»ò·´Ïò£©µÄDFSCODE $df$\;
-%    $dfscode=dfscode+df$\;
-%    \If{$dfscode$ÊÇ×îĞ¡DFSCODE}
-%    {
-%        ¼ÆËã$dfscode$µÄÆµÂÊ$Sup$\;
-%        \If{$Sup\geq minSup$}
-%        {
-%            SubMining($G$,$dfscode$,$FreqEdge$,$minSup$)\;
-%        }
-%        return\;
-%    }
-%}
-%\end{algorithm}
-
-
-%\subsection{ÔËĞĞËÙ¶È²âÊÔ}
-%\subsubsection{²âÊÔÊı¾İ}
-%²âÊÔÊı¾İÎªgraph.data£ºÍ¼¼¯ºÏÖĞÓĞ10000¸öÍ¼£¬Ã¿¸öÍ¼×î´óµãÊı²»³¬¹ı250£¬±ßÊı²»³¬¹ı250¡£
-%\subsubsection{²âÊÔ½á¹û}
-%Ê¹ÓÃXifeng Yan, Jiawei HanµÄÔ­×÷ÕßµÄ³ÌĞò \footnote{\url{http://www.cs.ucsb.edu/~xyan/software/gSpan2009-02-20/gSpan6.tar.gz}}½øĞĞÔËĞĞËÙ¶È²âÊÔµÄ¶Ô±È£¬$minSup$ãĞÖµÑ¡È¡ºÍÔËĞĞÊ±¼äÊı¾İÈç±í\ref{tab:runtime}ËùÊ¾¡£ÔËĞĞÊ±¼ä×÷Í¼ÈçÍ¼\ref{fig:runtime}ËùÊ¾¡£
-%\begin{figure}[H]
-%  \centering
-%  \includegraphics[width=350 pt]{runtime.eps}
-%  \caption{\zihaowu ÔËĞĞÊ±¼ä²âÊÔ}\label{fig:runtime}
-%\end{figure}
-%
-%
-%\begin{table}[H]
-%  \centering
-%  \caption{\zihaowu ÔËĞĞÊ±¼ä²âÊÔ}
-%    \begin{tabular}{R{2cm}R{4cm}R{4cm}}
-%    \toprule
-%    minSup & My(ms) & Yan(ms) \\
-%    \midrule
-%    0.9   & 2050  & 1837 \\
-%    0.8   & 2790  & 2299 \\
-%    0.7   & 3520  & 4298 \\
-%    0.6   & 8510  & 4554 \\
-%    0.5   & 14920 & 5749 \\
-%    0.4   & 13690 & 6001 \\
-%    0.3   & 22620 & 7318 \\
-%    0.2   & 25940 & 11164 \\
-%    0.1   & 85820 & 23648 \\
-%    0.09  & 96650 & 26878 \\
-%    0.08  & 87780 & 31235 \\
-%    0.07  & 133020 & 36047 \\
-%    0.06  & 146220 & 45141 \\
-%    0.05  & 178760 & 58311 \\
-%    0.04  & 227410 & 75880 \\
-%    0.03  & 387420 & 119003 \\
-%    0.02  & 772316 & 282170 \\
-%    0.01  & 4421358 & 1175110 \\
-%    \bottomrule
-%    \end{tabular}%
-%  \label{tab:runtime}%
-%\end{table}%
-%
-%
-%´Ó±í\ref{tab:runtime}ºÍÍ¼\ref{fig:runtime}¿´³ö£¬±¾³ÌĞòµÄĞÔÄÜ²»ÈçÔ­×÷ÕßµÄ³ÌĞòµÄĞÔÄÜ¡£»¹ÓĞÒ»Ğ©ÓÅ»¯¿ÉÒÔ¼ÓÈë£¬µ«ÊÇÒòÎªÊ±¼äµÄÔ­Òò£¬ËùÒÔÃ»ÓĞ¼ÓÈë³ÌĞò¡£
+\begin{enumerate}
+  \item µÚÒ»´ÎÓÃÊµ¼ÊµÄÊı¾İ×ö·ÖÀàÆ÷ÑµÁ·£¬¶ÔÊı¾İÔ¤´¦Àí»òÕßÌØÕ÷Ñ¡ÔñÓĞ¸üºÃµÄÈÏÊ¶£º¶Ô¸÷ÖÖÌØÕ÷µÄÑ¡Ôñ»òÕß´¦Àí·½·¨Ö»ÒªºÏÀí£¬ÄÜ¹»½âÊÍ£¬¶¼¿ÉÒÔ³¢ÊÔ¡£
+  \item Í¨¹ıKNNµÄGPUÊµÑé£¬Ñ§ÁËCUDA±à³ÌµÄ»ù±¾ÖªÊ¶£¬¶Ô²¢ĞĞ³ÌĞòÓĞ¸üºÃµÄÈÏÊ¶¡£
+  \item ÁË½âÊìÏ¤ÁËscikit-learn°ü£¬Ñ§»áÁËµ÷Õû²ÎÊıµÄ·½·¨¡£
+  \item ÓÉÓÚÊ±¼äÓĞÏŞ£¬ÓĞºÃ¶àÁÙÊ±½á¹ûÃ»ÓĞ±£ÁôÏÂÀ´£¬ÖØĞÂ×öÒ»±éÓÖ·Ç³£ºÄÊ±£¬Òò´ËÖ»ÓĞÒ»¸ö×ÜÌåµÄ½á¹û£¬·Ç³£ÒÅº¶£ºÒÔºóÔÚ±àĞ´³ÌĞò¹ı³ÌÖĞ×¢ÒâÖĞ¼ä½á¹ûµÄ±£Áô£¡
+  \item ÑµÁ·¹ı³ÌÊÇÒ»¸ö¸´ÔÓµÄ¹ı³Ì£¬¼´Ê¹Ò»¸ö¼òµ¥µÄ·ÖÀàÆ÷Ò²ÓĞºÜ¶àÖµµÃË¼¿¼µÄµØ·½¡£
+\end{enumerate}
 
 
 \newpage
 
 \begin{thebibliography}{100}
-\bibitem[1]{bib:gspanpaper}Yan, Xifeng, and Jiawei Han. "gspan: Graph-based substructure pattern mining." Data Mining, 2002. ICDM 2003. Proceedings. 2002 IEEE International Conference on. IEEE, 2002.
-\bibitem[2]{bib:mrgspan}Lin, Wenqing, Xiaokui Xiao, and Gabriel Ghinita. "Large-scale frequent subgraph mining in mapreduce." Data Engineering (ICDE), 2014 IEEE 30th International Conference on. IEEE, 2014.
-\bibitem[3]{bib:gpugspan}Kessl, Robert, et al. "Parallel Graph Mining with GPUs." The 3rd International Workshop on Big Data, Streams and Heterogeneous Source Mining: Algorithms, Systems, Programming Models and Applications. 2014.
+\bibitem[1]{bib:adult}UCI Machine Learning Repository. Adult Data Set. \url{https://archive.ics.uci.edu/ml/datasets/Adult}.
+\bibitem[2]{bib:adultref}Kohavi R. Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid[C]//KDD. 1996: 202-207.
+\bibitem[3]{bib:lihang}Àîº½. Í³¼ÆÑ§Ï°·½·¨[J]. 2012.
+\bibitem[4]{bib:cuda}nVIDIA. CUDA. \url{https://developer.nvidia.com/cuda-downloads}.
 \end{thebibliography}
+
+
+\newpage
+
+%\appendix
+%\section{´úÂëÇåµ¥\&ÈçºÎ±àÒëÖ´ĞĞ}
+%\subsection{k-Nearest Neighbors}
+%\subsubsection{±ê×¼°æ(kNN.cpp)}
+%\begin{lstlisting}[language=c++]
+%// #pragma comment(linker, "/STACK:102400000,102400000")
+%#include <cstdio>
+%#include <iostream>
+%#include <cstring>
+%#include <string>
+%#include <cmath>
+%#include <set>
+%#include <list>
+%#include <map>
+%#include <iterator>
+%#include <cstdlib>
+%#include <vector>
+%#include <queue>
+%#include <ctime>
+%#include <stack>
+%#include <algorithm>
+%#include <functional>
+%#include <ctime>
+%#include <fstream>
+%using namespace std;
+%typedef long long ll;
+%const double INF = 1e30;
+%typedef pair<int, double> prid;
+%
+%class KNN
+%{
+%public:
+%	static const int maxCol = 10;
+%	static const int maxRow = 46010;
+%
+%	static const int testNum = 4000; // Data number for test
+%
+%public:
+%	struct Node
+%	{
+%		double data[maxCol];
+%		string label;
+%	};
+%
+%	struct CMP
+%	{
+%		bool operator ()(const prid &A, const prid &B) const
+%		{
+%			return A.second < B.second;
+%		}
+%	};
+%
+%public:
+%	void init(int _k, int _row, int _col, string path); // init
+%	void input(); // Input data
+%	void ZScoreNorm(); // Z-Score Norm
+%	void MaxMinNorm(); // Max min Norm
+%	double dis(const Node &A, const Node &B); // Calculate distance between A and B
+%	void CalDis();
+%	string MaxFreqLabel(); // Calculate freq label
+%	void knn(); // Run knn
+%	void debug(); // For debug
+%
+%public:
+%	ifstream fin;
+%	string filepath;
+%
+%	int therK;
+%	int row;
+%	int col;
+%
+%	Node dataSet[maxRow];
+%	Node dataTest;
+%
+%	vector<prid> vec;
+%	map<string, int> mp;
+%};
+%
+%void KNN::init(int _k, int _row, int _col, string path)
+%{
+%	therK = _k;
+%	row = _row;
+%	col = _col;
+%	filepath = path;
+%
+%	cout << therK << " " << row << " " << col << endl;
+%}
+%
+%void KNN::input()
+%{
+%	fin.open(filepath);
+%	for (int i = 0; i < row; i++)
+%	{
+%		for (int j = 0; j < col; j++)
+%			fin >> dataSet[i].data[j];
+%		fin >> dataSet[i].label;
+%	}
+%	fin.close();
+%	// debug();
+%
+%	MaxMinNorm();
+%	// ZScoreNorm();
+%}
+%
+%void KNN::ZScoreNorm()
+%{
+%	for (int j = 0; j < col; j++)
+%	{
+%		double avg = 0;
+%		for (int i = 0; i < row; i++)
+%			avg += dataSet[i].data[j];
+%		avg /= (double)row;
+%
+%		double sig = 0;
+%		for (int i = 0; i < row; i++)
+%			sig += (dataSet[i].data[j] - avg) * (dataSet[i].data[j] - avg);
+%		sig /= (double)row;
+%		sig = sqrt(sig);
+%
+%		for (int i = 0; i < row; i++)
+%			dataSet[i].data[j] = (dataSet[i].data[j] - avg) / sig;
+%	}
+%}
+%
+%void KNN::MaxMinNorm()
+%{
+%	for (int j = 0; j < col; j++)
+%	{
+%		double maxx = max(dataSet[0].data[j], dataSet[1].data[j]);
+%		double minx = min(dataSet[0].data[j], dataSet[1].data[j]);
+%		for (int i = 0; i < row; i++)
+%		{
+%			//if (dataSet[i].data[j] > maxx) maxx = dataSet[i].data[j];
+%			//else if (dataSet[i].data[j] < minx) minx = dataSet[i].data[j];
+%			maxx = max(maxx, dataSet[i].data[j]);
+%			minx = min(minx, dataSet[i].data[j]);
+%		}
+%		for (int i = 0; i < row; i++)
+%			dataSet[i].data[j] = (double)(dataSet[i].data[j] - minx) / (double)(maxx - minx);
+%	}
+%}
+%
+%double KNN::dis(const Node &A, const Node &B)
+%{
+%	double ret = 0;
+%	for (int i = 0; i < col; i++)
+%		ret += (A.data[i] - B.data[i]) * (A.data[i] - B.data[i]);
+%	return sqrt(ret);
+%}
+%
+%void KNN::CalDis()
+%{
+%	vec.clear();
+%	for (int i = testNum; i < row; i++)
+%		vec.push_back(make_pair(i, dis(dataTest, dataSet[i])));
+%}
+%
+%string KNN::MaxFreqLabel()
+%{
+%	CalDis();
+%	sort(vec.begin(), vec.end(), CMP());
+%
+%	mp.clear();
+%	for (int i = 0; i < therK; i++)
+%		mp[dataSet[vec[i].first].label]++;
+%
+%	string ret;
+%	int cnt = 0;
+%	for (auto ite = mp.begin(); ite != mp.end(); ite++)
+%	{
+%		if (ite->second > cnt)
+%		{
+%			cnt = ite->second;
+%			ret = ite->first;
+%		}
+%	}
+%
+%	return ret;
+%}
+%
+%void KNN::knn()
+%{
+%	cout << "Test data num: " << testNum << endl;
+%
+%	int cntTP = 0, cntFP = 0, cntTN = 0, cntFN = 0;
+%	for (int i = 0; i < testNum; i++)
+%	{
+%		dataTest = dataSet[i];
+%		string tmp = MaxFreqLabel();
+%		if (tmp == dataTest.label)
+%		{
+%			if (dataTest.label == "1") cntTP++;
+%			else cntTN++;
+%		}
+%		if (tmp != dataTest.label)
+%		{
+%			if (dataTest.label == "1") cntFP++;
+%			else cntFN++;
+%		}
+%	}
+%
+%	double Prec = (double)cntTP / (double)(cntTP + cntFP);
+%	double Accu = (double)(cntTP + cntTN) / (double)(testNum);
+%	double Recall = (double)cntTP / (double)(cntTP + cntFN);
+%	double S = (double)cntTN / (double)(cntTN + cntFP);
+%	double F = 2 * Recall * Accu / (Recall + Accu);
+%
+%	cout << Prec << " " << Accu << " " << Recall << " " << S << " " << F << endl;
+%}
+%
+%void KNN::debug()
+%{
+%	ofstream fout;
+%	fout.open("debug.txt");
+%	for (int i = 0; i < row; i++)
+%	{
+%		for (int j = 0; j < col; j++)
+%			fout << dataSet[i].data[j] << "\t";
+%		fout << dataSet[i].label << endl;
+%	}
+%}
+%
+%KNN knn;
+%
+%void init()
+%{
+%	knn.init(7, 45222, 8, "allTypeC.txt");
+%}
+%void input()
+%{
+%	knn.input();
+%}
+%void debug()
+%{
+%	//
+%}
+%void solve()
+%{
+%	clock_t st, ed;
+%	st = clock();
+%	knn.knn();
+%	ed = clock();
+%	cout << "Time: " << ed - st << endl;
+%}
+%void output()
+%{
+%	//
+%}
+%int main()
+%{
+%	init();
+%	input();
+%	solve();
+%	output();
+%
+%	return 0;
+%}
+%\end{lstlisting}
+%\subsubsection{GPU¼ÓËÙ°æ(kNN-CUDA.cu)}
+%\begin{lstlisting}[language=c++]
+%// #pragma comment(linker, "/STACK:102400000,102400000")
+%#include <cstdio>
+%#include <iostream>
+%#include <cstring>
+%#include <string>
+%#include <cmath>
+%#include <set>
+%#include <list>
+%#include <map>
+%#include <iterator>
+%#include <cstdlib>
+%#include <vector>
+%#include <queue>
+%#include <ctime>
+%#include <stack>
+%#include <algorithm>
+%#include <functional>
+%#include <ctime>
+%#include <fstream>
+%using namespace std;
+%typedef long long ll;
+%const double INF = 1e30;
+%typedef pair<int, double> prid;
+%
+%class KNN
+%{
+%public:
+%	static const int maxCol = 10;
+%	static const int maxRow = 46010;
+%
+%	static const int testNum = 4000; // Data number for test
+%
+%public:
+%	struct Node
+%	{
+%		double data[maxCol];
+%		string label;
+%	};
+%
+%	struct CMP
+%	{
+%		bool operator ()(const prid &A, const prid &B) const
+%		{
+%			return A.second < B.second;
+%		}
+%	};
+%
+%public:
+%	void init(int _k, int _row, int _col, string path); // init
+%	void input(); // Input data
+%	void ZScoreNorm(); // Z-Score Norm
+%	void MaxMinNorm(); // Max min Norm
+%	double dis(const Node &A, const Node &B); // Calculate distance between A and B
+%	void CalDis();
+%	string MaxFreqLabel(); // Calculate freq label
+%	void knn(); // Run knn
+%
+%	void CUDAInit(); // Init CUDA
+%	//static __global__ void DisKernel(double *traindata, double *testdata, double *dis, int pitch, int N, int D);
+%
+%
+%	void debug(); // For debug
+%
+%public:
+%	ifstream fin;
+%	string filepath;
+%
+%	int therK;
+%	int row;
+%	int col;
+%
+%	Node dataSet[maxRow];
+%	Node dataTest;
+%
+%	vector<prid> vec;
+%	map<string, int> mp;
+%
+%	// Data for CUDA
+%	double trainmtx[maxRow][maxCol];
+%	int trainRow;
+%	double *GTrainData;
+%	size_t pitch_d;
+%	size_t pitch_h;
+%	double *GTestData;
+%	double *GDis;
+%	double *distance;
+%};
+%
+%void KNN::init(int _k, int _row, int _col, string path)
+%{
+%	therK = _k;
+%	row = _row;
+%	col = _col;
+%	filepath = path;
+%
+%	cout << therK << " " << row << " " << col << endl;
+%}
+%
+%void KNN::input()
+%{
+%	fin.open(filepath);
+%	for (int i = 0; i < row; i++)
+%	{
+%		for (int j = 0; j < col; j++)
+%			fin >> dataSet[i].data[j];
+%		fin >> dataSet[i].label;
+%	}
+%	fin.close();
+%	// debug();
+%
+%	MaxMinNorm();
+%	// ZScoreNorm();
+%}
+%
+%void KNN::ZScoreNorm()
+%{
+%	for (int j = 0; j < col; j++)
+%	{
+%		double avg = 0;
+%		for (int i = 0; i < row; i++)
+%			avg += dataSet[i].data[j];
+%		avg /= (double)row;
+%
+%		double sig = 0;
+%		for (int i = 0; i < row; i++)
+%			sig += (dataSet[i].data[j] - avg) * (dataSet[i].data[j] - avg);
+%		sig /= (double)row;
+%		sig = sqrt(sig);
+%
+%		for (int i = 0; i < row; i++)
+%			dataSet[i].data[j] = (dataSet[i].data[j] - avg) / sig;
+%	}
+%}
+%
+%void KNN::MaxMinNorm()
+%{
+%	for (int j = 0; j < col; j++)
+%	{
+%		double maxx = max(dataSet[0].data[j], dataSet[1].data[j]);
+%		double minx = min(dataSet[0].data[j], dataSet[1].data[j]);
+%		for (int i = 0; i < row; i++)
+%		{
+%			//if (dataSet[i].data[j] > maxx) maxx = dataSet[i].data[j];
+%			//else if (dataSet[i].data[j] < minx) minx = dataSet[i].data[j];
+%			maxx = max(maxx, dataSet[i].data[j]);
+%			minx = min(minx, dataSet[i].data[j]);
+%		}
+%		for (int i = 0; i < row; i++)
+%			dataSet[i].data[j] = (double)(dataSet[i].data[j] - minx) / (double)(maxx - minx);
+%	}
+%}
+%
+%double KNN::dis(const Node &A, const Node &B)
+%{
+%	double ret = 0;
+%	for (int i = 0; i < col; i++)
+%		ret += (A.data[i] - B.data[i]) * (A.data[i] - B.data[i]);
+%	return sqrt(ret);
+%}
+%
+%__global__ void DisKernel(double *traindata, double *testdata, double *dis, int pitch, int N, int D)
+%{
+%	int tid = blockIdx.x;
+%	if (tid < N)
+%	{
+%		double temp = 0;
+%		double sum = 0;
+%		for (int i = 0; i < D; i++)
+%		{
+%			temp = *((double*)((char*)traindata + tid * pitch) + i) - testdata[i];
+%			sum += temp * temp;
+%		}
+%		dis[tid] = sum;
+%	}
+%}
+%
+%void KNN::CalDis()
+%{
+%	vec.clear();
+%
+%	//cudaMemset(GTestData, 0, col * sizeof(double));
+%	cudaMemset(GDis, 0, trainRow * sizeof(double));
+%
+%	cudaMemcpy(GTestData, dataTest.data, col * sizeof(double), cudaMemcpyHostToDevice);
+%
+%	DisKernel << <trainRow, 1 >> >(GTrainData, GTestData, GDis, pitch_d, trainRow, col);
+%
+%	cudaMemcpy(distance, GDis, trainRow * sizeof(double), cudaMemcpyDeviceToHost);
+%
+%	for (int i = testNum; i < row; i++)
+%		vec.push_back(make_pair(i, distance[i - testNum]));
+%
+%}
+%
+%string KNN::MaxFreqLabel()
+%{
+%	CalDis();
+%	sort(vec.begin(), vec.end(), CMP());
+%
+%	mp.clear();
+%	for (int i = 0; i < therK; i++)
+%		mp[dataSet[vec[i].first].label]++;
+%
+%	string ret;
+%	int cnt = 0;
+%	for (auto ite = mp.begin(); ite != mp.end(); ite++)
+%	{
+%		if (ite->second > cnt)
+%		{
+%			cnt = ite->second;
+%			ret = ite->first;
+%		}
+%	}
+%
+%	return ret;
+%}
+%
+%void KNN::knn()
+%{
+%	CUDAInit();
+%	cout << "Test data num: " << testNum << endl;
+%
+%	int cnt = 0;
+%	for (int i = 0; i < testNum; i++)
+%	{
+%		dataTest = dataSet[i];
+%		if (MaxFreqLabel() == dataTest.label)
+%			cnt++;
+%	}
+%
+%	//cout << cnt << " " << testNum << endl;
+%
+%	cout << "Accuracy Rate: " << (double)cnt / (double)testNum << endl;
+%}
+%
+%void KNN::CUDAInit()
+%{
+%	trainRow = row - testNum;
+%	for (int i = testNum; i < row; i++)
+%	{
+%		for (int j = 0; j < col; j++)
+%			trainmtx[i - testNum][j] = dataSet[i].data[j];
+%	}
+%
+%	pitch_h = col*sizeof(double);
+%
+%	cudaMallocPitch(&GTrainData, &pitch_d, col * sizeof(double), trainRow);
+%	cudaMemset(GTrainData, 0, trainRow * col * sizeof(double));
+%	cudaMemcpy2D(GTrainData, pitch_d, trainmtx, pitch_h, col * sizeof(double), trainRow, cudaMemcpyHostToDevice);
+%
+%	distance = new double[trainRow];
+%
+%	cudaMalloc(&GTestData, col * sizeof(double));
+%	cudaMalloc(&GDis, trainRow * sizeof(double));
+%}
+%
+%void KNN::debug()
+%{
+%	ofstream fout;
+%	fout.open("debug.txt");
+%	for (int i = 0; i < row; i++)
+%	{
+%		for (int j = 0; j < col; j++)
+%			fout << dataSet[i].data[j] << "\t";
+%		fout << dataSet[i].label << endl;
+%	}
+%}
+%
+%KNN knn;
+%
+%void init()
+%{
+%	knn.init(7, 45222, 8, "allTypeC.txt");
+%}
+%void input()
+%{
+%	knn.input();
+%}
+%void debug()
+%{
+%	//
+%}
+%void solve()
+%{
+%	clock_t st, ed;
+%	st = clock();
+%	knn.knn();
+%	ed = clock();
+%	cout << "Time: " << ed - st << endl;
+%}
+%void output()
+%{
+%	//
+%}
+%int main()
+%{
+%	init();
+%	input();
+%	solve();
+%	output();
+%
+%	return 0;
+%}
+%\end{lstlisting}
+%
+%\subsection{}
+%\begin{lstlisting}[language=python]
+%a
+%\end{lstlisting}
+%
+%\subsection{}
+%\begin{lstlisting}[language=python]
+%from sklearn.linear_model import LogisticRegression
+%from sklearn import cross_validation,metrics
+%from sklearn.svm import SVC
+%from sklearn.cross_validation import ShuffleSplit
+%from sklearn.learning_curve import learning_curve
+%from sklearn.grid_search import GridSearchCV
+%from sklearn.naive_bayes import GaussianNB
+%from sklearn import preprocessing
+%
+%import pickle,sys,os
+%import time
+%from datetime import datetime
+%from pprint import pprint
+%import numpy as np
+%
+%if __name__ == '__main__':
+%
+%	# print("all.pik")
+%	print("allNew.pik")
+%	print(datetime.now())
+%	# fp = open("all.pik","rb")
+%	fp = open("allNew.pik","rb")
+%	allData = pickle.load(fp)
+%	m = len(allData)
+%	n = len(allData[0])
+%	print("orgidata:",m,n)
+%	for i in range(0,m):
+%		try:
+%			for j in range(0,n):
+%				allData[i][j] = float(allData[i][j])
+%		except Exception:
+%			print("i,",i)
+%			pprint(allData[i])
+%	allD = np.array(allData)
+%	label = allD[:,-1]
+%	allData = allD[:,:-1]
+%	# minMaxScaler = preprocessing.MinMaxScaler()
+%	# allData = minMaxScaler.fit_transform(allData)
+%	L = np.shape(allData)[0]
+%	print("items: ",L)
+%	iterN = 10
+%	ss = ShuffleSplit(L,iterN,test_size=0.1,random_state=0)
+%	cnt = 0
+%	LogAcc = []
+%	# Set the parameters by cross-validation
+%	log_tuned_parameters = [{'penalty': ['l1'],'C': [1, 5, 10, 100]},
+%	                    {'penalty': ['l2'], 'C': [1, 5 ,10, 100]}]
+%
+%	svm_tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.5],'C': [1, 5, 10, 100]},
+%							{'kernel': ['linear'], 'gamma': [0.5],'C': [1, 5, 10, 100]}]
+%
+%	for trainId,testId in ss:
+%		'''
+%		  Get train data,label and test data,label accroding to shufflesplit
+%		'''
+%		cnt+=1
+%		trainVec = allData[trainId]
+%		trainLabel = label[trainId]
+%		testVec = allData[testId]
+%		testLabel = label[testId]
+%
+%		print("######iter %d#####" %cnt)
+%
+%		###logistic #####
+%		print("logistic regression:")
+%		logS = time.clock()
+%		logisticRegression = LogisticRegression()
+%		score = "f1_micro"
+%		cv =ShuffleSplit(len(trainVec),3,test_size=0.1,random_state=10)
+%		clf =  GridSearchCV(logisticRegression, log_tuned_parameters, cv=cv, n_jobs =1,
+%	                       scoring='%s' % score)
+%		clf.fit(trainVec,trainLabel)
+%		print(clf.best_params_)
+%		predict = clf.predict(testVec)
+%
+%		# logisticRegression.fit(trainVec,trainLabel)
+%		# predict = logisticRegression.predict(testVec)
+%
+%		accuracy = metrics.accuracy_score(testLabel,predict)
+%		recall = metrics.recall_score(testLabel,predict,pos_label=None,average='micro')
+%		# recall = [ sum(recall)/2.0,recall[1] ]
+%		# print("accuracy,recall: ",accuracy,recall[0],recall[-1])
+%		print("accuracy,recall: ",accuracy,recall)
+%		print(metrics.classification_report(testLabel,predict))
+%		print("confusion_matrix:")
+%		cm = metrics.confusion_matrix(testLabel,predict)
+%		print(cm)
+%		logE = time.clock()
+%		print("Logistic Regression time: {0}s".format(logE-logS) )
+%
+%		###logistic #####
+%		print("GaussianNB :")
+%		logS = time.clock()
+%		NaiveB = LogisticRegression()
+%		score = "f1_micro"
+%		cv =ShuffleSplit(len(trainVec),3,test_size=0.1,random_state=10)
+%		clf =  GridSearchCV(NaiveB, {}, cv=cv, n_jobs=1,
+%	                       scoring='%s' % score)
+%		clf.fit(trainVec,trainLabel)
+%		print(clf.best_params_)
+%		predict = clf.predict(testVec)
+%
+%		# logisticRegression.fit(trainVec,trainLabel)
+%		# predict = logisticRegression.predict(testVec)
+%
+%		accuracy = metrics.accuracy_score(testLabel,predict)
+%		recall = metrics.recall_score(testLabel,predict,pos_label=None,average='micro')
+%		# recall = [ sum(recall)/2.0,recall[1] ]
+%		# print("accuracy,recall: ",accuracy,recall[0],recall[-1])
+%		print("accuracy,recall: ",accuracy,recall)
+%		print(metrics.classification_report(testLabel,predict))
+%		print("confusion_matrix:")
+%		cm = metrics.confusion_matrix(testLabel,predict)
+%		print(cm)
+%		logE = time.clock()
+%		print("GaussianNB time: {0}s".format(logE-logS) )
+%
+%
+%		## svm #####
+%		print("\nsvm:")
+%		svmTS = time.clock()
+%		svmKernelway = 'rbf'
+%		svrrbf = SVC(kernel=svmKernelway,C=10,gamma=0.5)
+%		# print(type(testVec),np.shape(testVec))
+%
+%		score = "f1_micro"
+%		cv =ShuffleSplit(len(trainVec),2,test_size=0.1,random_state=10)
+%		clf =  GridSearchCV(SVC(C=1), svm_tuned_parameters, cv=cv, n_jobs = 2,
+%	                       scoring='%s' % score)
+%
+%		clf.fit(trainVec,trainLabel)
+%		print(clf.best_params_)
+%		testLabel = clf.predict(testVec)
+%
+%		# svrrbf.fit(trainVec,trainLabel)
+%		# predict = svrrbf.predict(testVec)
+%		accuracy = metrics.accuracy_score(testLabel,predict)
+%		recall = metrics.recall_score(testLabel,predict,pos_label=None,average='micro')
+%		# recall = [ sum(recall)/2.0,recall[1] ]
+%		print("accuracy,recall: ",accuracy,recall)
+%		print(metrics.classification_report(testLabel,predict))
+%		print("confusion_matrix:")
+%		cm = metrics.confusion_matrix(testLabel,predict)
+%		print(cm)
+%		svmTE = time.clock()
+%		print("svm time: {0}s".format(svmTE-svmTS) )
+%
+%# # ####logistic regression#####
+%# print("logistic regression:")
+%# logisticRegression = LogisticRegression()
+%# accuracy = cross_validation.cross_val_score(logisticRegression,train,label,scoring='accuracy',cv=10)
+%# print("accuracy:",accuracy)
+%# print("accuracy mean:",accuracy.mean())
+%# recalls = cross_validation.cross_val_score(logisticRegression,train,label,scoring='recall_micro',cv=10)
+%# print("recall:",recalls)
+%# print("recall mean:",recalls.mean())
+%
+%# # ####svm####
+%# print("svm:")
+%# svmKernelway = 'linear'
+%# svrrbf = SVC(kernel=svmKernelway,C=10,gamma=0.5)
+%# accuracy = cross_validation.cross_val_score(svrrbf,train,label,scoring='accuracy',cv=10)
+%# print("accuracy:",accuracy)
+%# print("accuracy mean:",accuracy.mean())
+%# recalls = cross_validation.cross_val_score(svrrbf,train,label,scoring='recall_micro',cv=10)
+%# print("recall:",recalls)
+%# print("recall mean:",recalls.mean())
+%# print("\n")
+%\end{lstlisting}
 
 \end{document}
